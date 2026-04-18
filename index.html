@@ -3,1785 +3,949 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sagar Lal Verma — Immunologist & Research Scholar</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>Sagar Lal Verma — PhD Applicant | Immunology &amp; Viral Pathology</title>
+<meta name="description" content="Sagar Lal Verma — PhD Applicant specializing in Immunology &amp; Viral Pathology. Systematic reviews, Long COVID research, and AI-assisted literature synthesis.">
+<meta name="author" content="Sagar Lal Verma">
+<meta property="og:title" content="Sagar Lal Verma — PhD Applicant | Immunology &amp; Viral Pathology">
+<meta property="og:description" content="Independent researcher specializing in Immunology and Viral Pathology. Currently focused on immune dysregulation in Long COVID.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sagarlalverma.com.np/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sagar Lal Verma — PhD Applicant | Immunology &amp; Viral Pathology">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  :root {
-    --bg: #020a0f;
-    --bg2: #030d14;
-    --surface: #071520;
-    --border: rgba(0,200,180,0.12);
-    --accent: #00c8b4;
-    --accent2: #0ff5e0;
-    --accent3: #5eead4;
-    --gold: #c9a84c;
-    --text: #c8e6e0;
-    --text-dim: #6a9a94;
-    --text-bright: #e8f8f5;
-    --glow: rgba(0,200,180,0.15);
-    --glow-strong: rgba(0,200,180,0.35);
-    --red: #ff6b6b;
-    --purple: #9b8bff;
-  }
+:root{--ink2:#1e2a1e;--forest:#143620;--moss:#2a5c3a;--sage:#4d8c5e;--mint:#a8d5b5;--gold:#c9960c;--gold2:#e8b422;--amber:#f5d07a;--cream:#faf6ee;--paper:#f2ece0;--linen:#e8dfc8;--white:#fff;--text:#1a1a1a;--text2:#3d3d3a;--text3:#6b6b65;--border:rgba(20,54,32,.12);--orcid:#a6ce39;--linkedin:#0077b5;--transition:all .3s cubic-bezier(.4,0,.2,1)}
+body.dark{--cream:#111a13;--paper:#162019;--linen:#1c2b1f;--white:#1e2e21;--text:#e8dfc8;--text2:#c8bfa8;--text3:#8a9e8e;--border:rgba(168,213,181,.12);--ink2:#0a1009}
+body.dark #about,body.dark #experience,body.dark #references,body.dark #contact{background:var(--cream)}
+body.dark #education,body.dark #skills{background:var(--paper)}
+body.dark nav{background:rgba(17,26,19,.95)}
+body.dark .ecard,body.dark .sblock,body.dark .rref,body.dark .citem{background:var(--paper)}
+body.dark .ecard:hover,body.dark .rref:hover{background:var(--linen)}
+body.dark footer{background:#080e09}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+*{cursor:none!important}
+#cur{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+#ring{position:fixed;width:36px;height:36px;border:1.5px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s;opacity:.5}
+@media(pointer:coarse){*{cursor:auto!important}#cur,#ring{display:none}}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--cream)}::-webkit-scrollbar-thumb{background:var(--moss);border-radius:2px}
+body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E")}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── DARK MODE TOGGLE ── */
+.dark-toggle{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer!important;transition:var(--transition);color:var(--text3);font-size:.9rem;flex-shrink:0}
+.dark-toggle:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,150,12,.08)}
 
-  html { scroll-behavior: smooth; }
+/* ── BACK TO TOP ── */
+#back-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--forest);color:var(--amber);border:none;display:flex;align-items:center;justify-content:center;font-size:.85rem;z-index:500;opacity:0;transform:translateY(12px);transition:var(--transition);cursor:pointer!important;box-shadow:0 4px 20px rgba(20,54,32,.3)}
+#back-top.show{opacity:1;transform:translateY(0)}
+#back-top:hover{background:var(--gold);color:var(--forest)}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Libre Baskerville', Georgia, serif;
-    overflow-x: hidden;
-    cursor: none;
-  }
+/* ── SKILL BARS ── */
+.skill-bar-wrap{margin-top:1rem}
+.skill-bar-item{margin-bottom:.9rem}
+.skill-bar-label{display:flex;justify-content:space-between;font-size:.75rem;font-weight:500;color:var(--text2);margin-bottom:.35rem}
+.skill-bar-label span:last-child{color:var(--gold);font-weight:600}
+.skill-bar-track{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.skill-bar-fill{height:100%;background:linear-gradient(90deg,var(--forest),var(--sage));border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.skill-bar-fill.animated{width:var(--target)}
 
-  /* CUSTOM CURSOR */
-  .cursor {
-    position: fixed;
-    width: 12px; height: 12px;
-    background: var(--accent);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
-    mix-blend-mode: screen;
-  }
-  .cursor-ring {
-    position: fixed;
-    width: 40px; height: 40px;
-    border: 1px solid rgba(0,200,180,0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: transform 0.15s ease-out, width 0.3s, height 0.3s, border-color 0.3s;
-  }
+/* ── COUNTER ANIMATION ── */
+.sbig[data-count]{transition:opacity .2s}
 
-  /* CANVAS */
-  #bgCanvas {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 0;
-    opacity: 0.6;
-  }
+/* ── DOWNLOAD CV BUTTON ── */
+.btn-cv{display:inline-flex;align-items:center;gap:.6rem;padding:.75rem 1.6rem;background:rgba(255,255,255,.06);color:rgba(250,246,238,.7);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,.15);transition:var(--transition);border-radius:1px}
+.btn-cv:hover{background:rgba(255,255,255,.1);color:var(--mint);border-color:rgba(168,213,181,.3)}
 
-  /* NOISE OVERLAY */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-    opacity: 0.03;
-    z-index: 1;
-    pointer-events: none;
-  }
+/* ── READING PROGRESS BAR ── */
+#progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--sage));z-index:200;width:0%;transition:width .1s linear}
 
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 1.2rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(180deg, rgba(2,10,15,0.95) 0%, transparent 100%);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 300;
-    letter-spacing: 0.15em;
-    color: var(--accent3);
-    text-transform: uppercase;
-  }
-  .nav-logo span { color: var(--gold); }
-  .nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-  }
-  .nav-links a {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    text-decoration: none;
-    transition: color 0.3s;
-    position: relative;
-  }
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px; left: 0;
-    width: 0; height: 1px;
-    background: var(--accent);
-    transition: width 0.3s;
-  }
-  .nav-links a:hover { color: var(--accent2); }
-  .nav-links a:hover::after { width: 100%; }
+/* ── ENHANCED HERO STATS ── */
+.scard{transition:all .35s cubic-bezier(.4,0,.2,1)}
+.scard:hover{background:rgba(255,255,255,.09);transform:translateX(8px) translateY(-1px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
 
-  /* SECTIONS CONTAINER */
-  main { position: relative; z-index: 2; }
+/* ── SECTION FADE-IN STAGGER ── */
+.anim-d1{animation-delay:.1s}
+.anim-d2{animation-delay:.2s}
+.anim-d3{animation-delay:.3s}
+.anim-d4{animation-delay:.4s}
 
-  /* ========== HERO ========== */
-  #hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 4rem;
-    position: relative;
-    overflow: hidden;
-  }
+/* ── PRINT STYLES ── */
+@media print{
+  nav,#cur,#ring,#back-top,#progress-bar,.dark-toggle,.hscroll,.btn-gold,.btn-ghost,.btn-cv,.cta-strip{display:none!important}
+  body{background:#fff!important;color:#000!important}
+  .hero{min-height:auto;padding:2rem 0;background:var(--forest)!important}
+  .section{padding:2rem 1rem}
+  .ecard,.sblock,.rref{break-inside:avoid}
+}
 
-  .hero-content {
-    max-width: 900px;
-    padding-top: 6rem;
-  }
+/* ── ENHANCED RESPONSIVE NAV ── */
+@media(max-width:1000px){
+  .nav-right-group{display:flex;align-items:center;gap:.8rem}
+}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 5vw;background:rgba(250,246,238,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:padding .3s}
+nav.scrolled{padding:.9rem 5vw}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--forest);letter-spacing:.04em;text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{font-size:.73rem;font-weight:500;color:var(--text3);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .25s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--forest)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{padding:.5rem 1.4rem;background:var(--forest);color:var(--cream);font-size:.73rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--forest);transition:all .25s}
+.nav-cta:hover{background:transparent;color:var(--forest)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer!important}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--forest);transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--cream);z-index:99;flex-direction:column;justify-content:center;align-items:center;gap:2rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:2rem;font-weight:500;color:var(--forest);text-decoration:none;letter-spacing:.04em;transition:color .2s}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-menu .mob-cta{font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.8rem 2rem;background:var(--forest);color:var(--cream);border:none;margin-top:1rem}
 
-  .hero-eyebrow {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.3s forwards;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 2rem;
-    height: 1px;
-    background: var(--accent);
-  }
+/* ── HERO ── */
+.hero{min-height:100vh;position:relative;overflow:hidden;display:grid;place-items:center;background:var(--forest)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(42,92,58,.8) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(201,150,12,.12) 0%,transparent 60%),var(--forest)}
+.hero-grid{position:absolute;inset:0;opacity:.07;background-image:linear-gradient(rgba(250,246,238,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(250,246,238,.5) 1px,transparent 1px);background-size:80px 80px}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:1400px;padding:0 5vw;align-items:center;min-height:100vh}
+.hero-left{padding:10rem 4rem 6rem 0}
+.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);opacity:.6}
+.eyebrow span{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);opacity:.9}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,6vw,6rem);font-weight:700;color:var(--cream);line-height:1.02;margin-bottom:.5rem}
+.hero-name em{font-style:italic;color:var(--gold2);display:block}
+.hero-title{font-size:1.05rem;font-weight:300;color:rgba(250,246,238,.6);margin-bottom:2.5rem;line-height:1.7;max-width:460px}
+.hero-title strong{color:var(--mint);font-weight:500}
+.hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap}
+.btn-gold{display:inline-flex;align-items:center;gap:.7rem;padding:.85rem 2rem;background:var(--gold);color:var(--forest);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--gold)}
+.btn-gold:hover{background:transparent;color:var(--gold)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.7rem;padding:.85rem 2rem;background:transparent;color:rgba(250,246,238,.8);font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(250,246,238,.2);transition:all .3s}
+.btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
+.hero-right{display:flex;flex-direction:column;gap:1.5rem;padding:10rem 0 6rem 3rem}
+.scard{padding:1.8rem 2.2rem;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);backdrop-filter:blur(8px);display:flex;align-items:center;gap:1.5rem;transition:all .3s;position:relative;overflow:hidden}
+.scard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);opacity:.5;transition:opacity .3s}
+.scard:hover::before{opacity:1}
+.scard:hover{background:rgba(255,255,255,.07);transform:translateX(6px)}
+.sbig{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--gold2);line-height:1;min-width:72px}
+.slabel{font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);margin-bottom:.3rem}
+.sdesc{font-size:.88rem;color:rgba(250,246,238,.65);line-height:1.5}
+.hscroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:.5}
+.hscroll span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.sline{width:1px;height:50px;background:linear-gradient(to bottom,var(--amber),transparent);animation:sp 2s ease-in-out infinite}
+@keyframes sp{0%,100%{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(.5)}}
 
-  .hero-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 8vw, 7rem);
-    font-weight: 300;
-    line-height: 0.95;
-    color: var(--text-bright);
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.5s forwards;
-    letter-spacing: -0.02em;
-  }
-  .hero-name em {
-    font-style: italic;
-    color: var(--accent3);
-  }
+/* ── SECTIONS ── */
+.section{padding:7rem 5vw;position:relative}
+.section-inner{max-width:1300px;margin:0 auto}
+.slabel2{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.slabel2::before{content:'';width:32px;height:1px;background:var(--gold)}
+.slabel2 span{font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:500;color:var(--forest);line-height:1.1;margin-bottom:4.5rem}
+.sh em{font-style:italic;color:var(--moss)}
 
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--gold);
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.7s forwards;
-  }
+/* ── ABOUT ── */
+#about{background:var(--cream)}
+.about-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:6rem;align-items:start}
+.lead{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;font-style:italic;color:var(--forest);line-height:1.7;margin-bottom:1.8rem;padding-left:1.5rem;border-left:2px solid var(--gold)}
+.about-text p{font-size:.95rem;color:var(--text2);line-height:1.9;margin-bottom:1.2rem}
+.brow{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
+.badge{padding:.35rem .9rem;font-size:.72rem;font-weight:500;letter-spacing:.06em;border:1px solid;border-radius:2px}
+.bg{background:rgba(20,54,32,.06);color:var(--forest);border-color:rgba(20,54,32,.2)}
+.bo{background:rgba(201,150,12,.08);color:var(--gold);border-color:rgba(201,150,12,.25)}
+.dlist{display:flex;flex-direction:column}
+.drow{padding:1rem 0;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:.3rem}
+.drow:first-child{padding-top:0}
+.dk{font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.dv{font-size:.88rem;color:var(--text);font-weight:500}
+.dv a{color:var(--forest);text-decoration:none;transition:color .2s}
+.dv a:hover{color:var(--gold)}
+.orcid-a{display:inline-flex;align-items:center;gap:.4rem;color:var(--orcid)!important;font-weight:600}
+.li-a{display:inline-flex;align-items:center;gap:.4rem}
 
-  .hero-desc {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: var(--text-dim);
-    max-width: 580px;
-    margin-bottom: 3rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.9s forwards;
-  }
+/* ── EDUCATION ── */
+#education{background:var(--paper)}
+.edu-list{display:flex;flex-direction:column}
+.edu-item{display:grid;grid-template-columns:220px 1fr;padding:3rem 0;border-bottom:1px solid var(--border);position:relative}
+.edu-item:last-child{border-bottom:none}
+.edu-item::before{content:'';position:absolute;left:220px;top:3rem;width:12px;height:12px;background:var(--gold);border-radius:50%;transform:translateX(-6px)}
+.edu-item::after{content:'';position:absolute;left:220px;top:3rem;bottom:0;width:1px;background:var(--border);transform:translateX(-.5px)}
+.edu-item:last-child::after{display:none}
+.eyr{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--gold)}
+.einst{font-size:.78rem;color:var(--text3);margin-top:.3rem;line-height:1.4}
+.ebody{padding-left:3rem}
+.ebody h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:500;color:var(--forest);margin-bottom:.4rem;line-height:1.2}
+.esub{font-size:.82rem;color:var(--sage);margin-bottom:1rem;font-style:italic}
+.ebody p{font-size:.88rem;color:var(--text2);line-height:1.8;margin-bottom:1rem}
+.epill{display:inline-flex;padding:.3rem .85rem;font-size:.72rem;font-weight:600;letter-spacing:.05em;background:var(--forest);color:var(--amber);margin-right:.5rem;margin-top:.3rem}
+.epill.alt{background:rgba(20,54,32,.08);color:var(--forest)}
 
-  .hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 3rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 1.1s forwards;
-  }
-  .tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.4rem 0.9rem;
-    border: 1px solid var(--border);
-    color: var(--text-dim);
-    border-radius: 2px;
-    transition: all 0.3s;
-    background: rgba(0,200,180,0.03);
-  }
-  .tag:hover {
-    border-color: var(--accent);
-    color: var(--accent2);
-    background: rgba(0,200,180,0.08);
-    box-shadow: 0 0 20px var(--glow);
-  }
+/* ── EXPERIENCE ── */
+#experience{background:var(--cream)}
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--border);border:1px solid var(--border)}
+.ecard{background:var(--cream);padding:2.8rem;transition:background .3s;position:relative;overflow:hidden}
+.ecard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.ecard:hover{background:var(--white)}
+.ecard:hover::before{transform:scaleX(1)}
+.enum{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:var(--border);line-height:1;margin-bottom:1.5rem}
+.erole{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:500;color:var(--forest);margin-bottom:.3rem}
+.eorg{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);margin-bottom:.3rem}
+.eperiod{font-size:.78rem;color:var(--gold);font-weight:500;margin-bottom:1.4rem}
+.ecard ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.ecard li{font-size:.85rem;color:var(--text2);line-height:1.7;padding-left:1.2rem;position:relative}
+.ecard li::before{content:'';position:absolute;left:0;top:.65em;width:5px;height:1px;background:var(--sage)}
 
-  .hero-cta {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    opacity: 0;
-    animation: fadeUp 0.8s 1.3s forwards;
-  }
-  .btn-primary {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 1rem 2.5rem;
-    background: var(--accent);
-    color: var(--bg);
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--accent2);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s;
-  }
-  .btn-primary:hover::before { transform: scaleX(1); }
-  .btn-primary span { position: relative; z-index: 1; }
+/* ── RESEARCH ── */
+#research{background:var(--forest);position:relative;overflow:hidden}
+#research::before{content:'RESEARCH';position:absolute;font-family:'Playfair Display',serif;font-size:18vw;font-weight:700;color:rgba(255,255,255,.02);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none}
+#research .sh{color:var(--cream)}
+#research .slabel2 span{color:var(--amber)}
+#research .slabel2::before{background:var(--amber)}
+.rcard{border:1px solid rgba(255,255,255,.1);padding:3.5rem;position:relative;overflow:hidden;max-width:900px;background:rgba(255,255,255,.04);margin-bottom:2rem}
+.rcard::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 100% 0%,rgba(201,150,12,.08) 0%,transparent 60%);pointer-events:none}
+.rtag{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.2rem}
+.rtitle{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:500;font-style:italic;color:var(--cream);line-height:1.3;margin-bottom:1rem}
+.rsuper{font-size:.82rem;color:rgba(250,246,238,.4);margin-bottom:2.2rem}
+.rpoints{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.rp{padding:1.3rem 1.5rem;background:rgba(255,255,255,.04);border-left:1px solid rgba(201,150,12,.3)}
+.rp p{font-size:.83rem;color:rgba(250,246,238,.65);line-height:1.8}
+.rinterests{margin-top:3.5rem}
+.rinterests>p{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,246,238,.3);margin-bottom:1rem}
+.itags{display:flex;flex-wrap:wrap;gap:.7rem}
+.itag{padding:.35rem 1rem;font-size:.75rem;border:1px solid rgba(255,255,255,.1);color:rgba(250,246,238,.55);letter-spacing:.04em}
+.ocard{margin-top:3rem;border:1px solid rgba(166,206,57,.3);background:rgba(166,206,57,.05);padding:2.5rem}
+.ocard-hdr{display:flex;align-items:center;gap:1.2rem;margin-bottom:2rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(166,206,57,.2)}
+.ocard-hdr .fa-orcid{font-size:2.4rem;color:var(--orcid)}
+.ocard-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--cream)}
+.ocard-link{font-size:.8rem;color:var(--orcid);text-decoration:none;letter-spacing:.04em}
+.ocard-link:hover{opacity:.75}
+.ocard-body{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.ocol-title{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,208,122,.6);margin-bottom:1rem}
+.oentry{padding:.9rem 1.2rem;background:rgba(255,255,255,.04);border-left:2px solid rgba(166,206,57,.4)}
+.oentry+.oentry{margin-top:.8rem}
+.oentry-meta{font-size:.7rem;color:rgba(250,246,238,.35);margin-bottom:.3rem}
+.oentry-name{font-size:.85rem;color:rgba(250,246,238,.75);line-height:1.6}
 
-  .btn-ghost {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s;
-  }
-  .btn-ghost:hover { color: var(--accent2); }
-  .btn-ghost::after {
-    content: '→';
-    transition: transform 0.3s;
-  }
-  .btn-ghost:hover::after { transform: translateX(5px); }
+/* ── SKILLS ── */
+#skills{background:var(--paper)}
+.skills-layout{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.skills-intro p{font-size:.92rem;color:var(--text2);line-height:1.9}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.sblock{padding:1.8rem;background:var(--cream);border:1px solid var(--border);transition:all .3s}
+.sblock:hover{border-color:var(--moss);transform:translateY(-2px);box-shadow:0 8px 30px rgba(20,54,32,.08)}
+.sblock h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;color:var(--forest);margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid var(--border)}
+.stags{display:flex;flex-wrap:wrap;gap:.5rem}
+.stag{padding:.28rem .7rem;font-size:.72rem;background:rgba(20,54,32,.05);color:var(--text2);border:1px solid var(--border)}
 
-  /* HERO STATS */
-  .hero-stats {
-    position: absolute;
-    right: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    opacity: 0;
-    animation: fadeLeft 0.8s 1.5s forwards;
-  }
-  .stat {
-    text-align: right;
-    border-right: 1px solid var(--border);
-    padding-right: 1.5rem;
-  }
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--accent);
-    line-height: 1;
-    display: block;
-  }
-  .stat-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
+/* ── REFERENCES ── */
+#references{background:var(--cream)}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.rref{padding:2.5rem;border:1px solid var(--border);background:var(--paper);position:relative;overflow:hidden;transition:all .3s}
+.rref::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);opacity:.4;transition:opacity .3s}
+.rref:hover{background:var(--white);box-shadow:0 8px 30px rgba(20,54,32,.08)}
+.rref:hover::before{opacity:1}
+.rref-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:500;color:var(--forest);margin-bottom:.4rem}
+.rref-title{font-size:.8rem;color:var(--sage);margin-bottom:1.2rem;line-height:1.6;font-style:italic}
+.rref-contacts{display:flex;flex-direction:column;gap:.5rem}
+.rref-contacts a{font-size:.85rem;color:var(--text2);text-decoration:none;display:flex;align-items:center;gap:.6rem;transition:color .2s}
+.rref-contacts a:hover{color:var(--gold)}
+.rref-contacts svg{width:14px;height:14px;fill:var(--sage);flex-shrink:0}
 
-  /* SCROLL INDICATOR */
-  .scroll-hint {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 2s forwards;
-  }
-  .scroll-hint span {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
-  .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
-    animation: scrollPulse 2s infinite;
-  }
+/* ── CTA STRIP ── */
+.cta-strip{background:var(--linen);padding:5rem 5vw;text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23143620' fill-opacity='.04'/%3E%3C/svg%3E")}
+.cta-strip h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--forest);margin-bottom:1rem;position:relative}
+.cta-strip p{font-size:.95rem;color:var(--text2);margin-bottom:2.5rem;position:relative}
 
-  /* ========== SECTION BASE ========== */
-  section {
-    position: relative;
-    z-index: 2;
-    padding: 7rem 4rem;
-    border-top: 1px solid var(--border);
-  }
+/* ── CONTACT ── */
+#contact{background:var(--cream)}
+.clayout{display:grid;grid-template-columns:1.2fr 1fr;gap:6rem}
+.cleft h3{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:var(--forest);line-height:1.3;margin-bottom:1.2rem}
+.cleft p{font-size:.9rem;color:var(--text2);line-height:1.8;max-width:380px}
+.clist{display:flex;flex-direction:column;gap:.8rem}
+.citem{display:flex;align-items:center;gap:1.2rem;text-decoration:none;padding:1.3rem 1.5rem;background:var(--paper);border:1px solid var(--border);border-left:2px solid transparent;transition:all .3s}
+.citem:hover{border-left-color:var(--gold);transform:translateX(5px);background:var(--white)}
+.citem.co:hover{border-left-color:var(--orcid)}
+.citem.cl:hover{border-left-color:var(--linkedin)}
+.citem.cw:hover{border-left-color:var(--moss)}
+.cicon{width:38px;height:38px;background:var(--forest);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cicon svg{width:16px;height:16px;fill:var(--amber)}
+.cicon i{color:#fff;font-size:15px}
+.clabel{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:.2rem}
+.cval{font-size:.88rem;color:var(--text);font-weight:500}
 
-  .section-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .section-label::before {
-    content: '';
-    display: inline-block;
-    width: 1.5rem;
-    height: 1px;
-    background: var(--accent);
-  }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    font-weight: 300;
-    color: var(--text-bright);
-    margin-bottom: 1rem;
-    line-height: 1.1;
-  }
-  .section-title em { font-style: italic; color: var(--accent3); }
-  .section-subtitle {
-    font-size: 0.9rem;
-    color: var(--text-dim);
-    margin-bottom: 4rem;
-    max-width: 600px;
-    line-height: 1.7;
-  }
+/* ── FOOTER ── */
+footer{background:var(--ink2);padding:2.5rem 5vw;display:flex;justify-content:space-between;align-items:center;font-size:.75rem;letter-spacing:.06em;color:rgba(250,246,238,.3);flex-wrap:wrap;gap:1rem}
+.flogo{font-family:'Playfair Display',serif;font-size:1rem;color:rgba(250,246,238,.7)}
+.flogo span{color:var(--gold)}
 
-  /* ========== ABOUT ========== */
-  #about .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-  .about-left p {
-    font-size: 1.05rem;
-    line-height: 1.85;
-    color: var(--text);
-    margin-bottom: 1.5rem;
-  }
-  .about-left p strong { color: var(--accent3); font-weight: 400; }
-  .about-left blockquote {
-    border-left: 2px solid var(--gold);
-    padding-left: 1.5rem;
-    margin: 2rem 0;
-    font-style: italic;
-    color: var(--gold);
-    font-size: 1.1rem;
-    font-family: 'Cormorant Garamond', serif;
-  }
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.anim{opacity:0;transform:translateY(28px)}
+.anim.visible{animation:fadeUp .7s ease forwards;opacity:1;transform:translateY(0)}
 
-  .about-right { padding-top: 1rem; }
-  .interests-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  .interest-card {
-    padding: 1.2rem;
-    border: 1px solid var(--border);
-    background: rgba(0,200,180,0.03);
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .interest-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0,200,180,0.05) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .interest-card:hover::before { opacity: 1; }
-  .interest-card:hover { border-color: rgba(0,200,180,0.4); }
-  .interest-icon {
-    font-size: 1.4rem;
-    margin-bottom: 0.6rem;
-    display: block;
-  }
-  .interest-name {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    line-height: 1.4;
-  }
-
-  /* LOCATION BADGE */
-  .location-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border);
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-    margin-bottom: 2rem;
-  }
-  .location-dot {
-    width: 6px; height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-
-  /* ========== RESEARCH ========== */
-  #research { background: rgba(0,200,180,0.015); }
-
-  .research-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  .research-card {
-    padding: 2.5rem;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    position: relative;
-    transition: all 0.4s;
-    overflow: hidden;
-  }
-  .research-card::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 2px; height: 0;
-    background: var(--accent);
-    transition: height 0.4s;
-  }
-  .research-card:hover::after { height: 100%; }
-  .research-card:hover {
-    box-shadow: 0 20px 60px rgba(0,200,180,0.1), inset 0 0 40px rgba(0,200,180,0.03);
-    border-color: rgba(0,200,180,0.3);
-  }
-  .research-card.featured {
-    grid-column: span 2;
-    background: linear-gradient(135deg, var(--surface) 0%, rgba(0,200,180,0.05) 100%);
-    border-color: rgba(0,200,180,0.25);
-  }
-  .research-meta {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .research-meta .badge {
-    padding: 0.2rem 0.6rem;
-    background: rgba(0,200,180,0.1);
-    border: 1px solid rgba(0,200,180,0.2);
-    font-size: 0.5rem;
-  }
-  .research-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--text-bright);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-  .research-card p {
-    font-size: 0.85rem;
-    line-height: 1.8;
-    color: var(--text-dim);
-    margin-bottom: 1.5rem;
-  }
-  .research-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .r-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    padding: 0.25rem 0.6rem;
-    background: rgba(94,234,212,0.06);
-    border: 1px solid rgba(94,234,212,0.15);
-    color: var(--accent3);
-    letter-spacing: 0.1em;
-  }
-
-  /* ========== TIMELINE ========== */
-  #timeline { }
-
-  .timeline-container {
-    position: relative;
-    padding-left: 3rem;
-  }
-  .timeline-line {
-    position: absolute;
-    left: 0; top: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--accent) 0%, var(--border) 100%);
-  }
-
-  .timeline-item {
-    position: relative;
-    padding-bottom: 4rem;
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: all 0.6s;
-  }
-  .timeline-item.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .timeline-dot {
-    position: absolute;
-    left: -3.4rem;
-    top: 0.2rem;
-    width: 14px; height: 14px;
-    border: 2px solid var(--accent);
-    background: var(--bg);
-    border-radius: 50%;
-    transition: all 0.3s;
-  }
-  .timeline-item:hover .timeline-dot {
-    background: var(--accent);
-    box-shadow: 0 0 20px var(--glow-strong);
-  }
-  .timeline-year {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-  .timeline-item h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--text-bright);
-    margin-bottom: 0.4rem;
-  }
-  .timeline-org {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
-  }
-  .timeline-item p {
-    font-size: 0.88rem;
-    line-height: 1.8;
-    color: var(--text-dim);
-    max-width: 700px;
-  }
-  .timeline-item ul {
-    list-style: none;
-    margin-top: 0.8rem;
-  }
-  .timeline-item ul li {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    padding: 0.3rem 0;
-    padding-left: 1.2rem;
-    position: relative;
-    line-height: 1.6;
-  }
-  .timeline-item ul li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 0.75rem;
-  }
-
-  /* ========== SKILLS ========== */
-  #skills { background: rgba(0,200,180,0.015); }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  .skill-category {
-    padding: 2rem;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    transition: all 0.3s;
-  }
-  .skill-category:hover {
-    border-color: rgba(0,200,180,0.3);
-    box-shadow: 0 0 30px rgba(0,200,180,0.07);
-  }
-  .skill-cat-title {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .skill-cat-icon { font-size: 1rem; }
-
-  .skill-item {
-    margin-bottom: 1.2rem;
-  }
-  .skill-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.4rem;
-  }
-  .skill-name {
-    font-size: 0.8rem;
-    color: var(--text);
-  }
-  .skill-level {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    color: var(--text-dim);
-    letter-spacing: 0.1em;
-  }
-  .skill-bar {
-    height: 2px;
-    background: rgba(255,255,255,0.06);
-    position: relative;
-    overflow: hidden;
-  }
-  .skill-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    width: 0;
-    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-  }
-  .skill-fill::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: -3px;
-    width: 8px; height: 8px;
-    background: var(--accent2);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent2);
-  }
-
-  /* LANGUAGE BADGES */
-  .language-grid {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-  }
-  .lang-badge {
-    padding: 0.8rem 1.5rem;
-    border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-    transition: all 0.3s;
-    min-width: 100px;
-  }
-  .lang-badge:hover {
-    border-color: var(--accent);
-    background: rgba(0,200,180,0.05);
-  }
-  .lang-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: var(--text-bright);
-  }
-  .lang-level {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-  }
-
-  /* ========== ACHIEVEMENTS ========== */
-  #achievements {}
-
-  .achievement-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  .achievement-card {
-    padding: 2rem;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s;
-  }
-  .achievement-card::before {
-    content: '';
-    position: absolute;
-    top: -50%; left: -50%;
-    width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(0,200,180,0.06) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.4s;
-  }
-  .achievement-card:hover::before { opacity: 1; }
-  .achievement-card:hover {
-    border-color: rgba(201,168,76,0.4);
-    box-shadow: 0 20px 60px rgba(201,168,76,0.08);
-  }
-  .achievement-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: block;
-  }
-  .achievement-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--text-bright);
-    margin-bottom: 0.6rem;
-    line-height: 1.3;
-  }
-  .achievement-card p {
-    font-size: 0.82rem;
-    line-height: 1.7;
-    color: var(--text-dim);
-  }
-  .achievement-highlight {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 0.8rem;
-    display: block;
-  }
-
-  /* ========== CONTACT ========== */
-  #contact {
-    background: linear-gradient(180deg, transparent, rgba(0,200,180,0.03));
-    text-align: center;
-  }
-  #contact .section-title { text-align: center; }
-  #contact .section-label {
-    justify-content: center;
-  }
-  #contact .section-label::before { display: none; }
-  #contact .section-subtitle { margin: 0 auto 3rem; text-align: center; }
-
-  .contact-cards {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
-  }
-  .contact-card {
-    padding: 1.5rem 2.5rem;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    transition: all 0.3s;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    min-width: 180px;
-  }
-  .contact-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 40px var(--glow);
-    transform: translateY(-4px);
-  }
-  .contact-card-icon { font-size: 1.5rem; }
-  .contact-card-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
-  .contact-card-value {
-    font-size: 0.8rem;
-    color: var(--text);
-  }
-
-  .contact-cta-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--text-dim);
-    margin-bottom: 0.5rem;
-  }
-
-  /* FOOTER */
-  footer {
-    padding: 3rem 4rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-  }
-  .footer-copy {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-  }
-  .footer-right {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .footer-right span { color: var(--accent); }
-
-  /* ========== ANIMATIONS ========== */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeLeft {
-    from { opacity: 0; transform: translateX(20px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes scrollPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(0,200,180,0.4); }
-    50% { box-shadow: 0 0 0 6px rgba(0,200,180,0); }
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-
-  /* REVEAL ON SCROLL */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s, transform 0.7s;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* MOLECULE VISUAL */
-  .molecule-container {
-    position: absolute;
-    right: -5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 350px;
-    height: 350px;
-    opacity: 0.12;
-    pointer-events: none;
-  }
-
-  /* GLITCH TEXT EFFECT */
-  .glitch {
-    position: relative;
-  }
-  .glitch::before, .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .glitch::before {
-    animation: glitch1 4s infinite;
-    color: var(--accent);
-    clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%);
-    opacity: 0;
-  }
-  .glitch::after {
-    animation: glitch2 4s infinite;
-    color: var(--red);
-    clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
-    opacity: 0;
-  }
-  @keyframes glitch1 {
-    0%, 90%, 100% { opacity: 0; transform: none; }
-    92% { opacity: 0.8; transform: translateX(-3px); }
-    94% { opacity: 0; }
-    96% { opacity: 0.6; transform: translateX(3px); }
-    98% { opacity: 0; }
-  }
-  @keyframes glitch2 {
-    0%, 90%, 100% { opacity: 0; transform: none; }
-    93% { opacity: 0.6; transform: translateX(3px); }
-    95% { opacity: 0; }
-    97% { opacity: 0.4; transform: translateX(-3px); }
-    99% { opacity: 0; }
-  }
-
-  /* TOOLTIP */
-  [data-tooltip] {
-    position: relative;
-  }
-  [data-tooltip]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    padding: 0.5rem 0.8rem;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
-    letter-spacing: 0.1em;
-  }
-  [data-tooltip]:hover::after { opacity: 1; }
-
-  /* HOVER GLOW */
-  .glow-on-hover {
-    transition: text-shadow 0.3s, color 0.3s;
-  }
-  .glow-on-hover:hover {
-    color: var(--accent2);
-    text-shadow: 0 0 20px var(--accent), 0 0 40px rgba(0,200,180,0.3);
-  }
-
-  /* SEPARATOR */
-  .sep {
-    width: 3rem;
-    height: 1px;
-    background: linear-gradient(90deg, var(--accent), transparent);
-    margin: 2rem 0;
-  }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    #hero { padding: 0 1.5rem; }
-    .hero-stats { display: none; }
-    section { padding: 5rem 1.5rem; }
-    #about .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .research-grid { grid-template-columns: 1fr; }
-    .research-card.featured { grid-column: span 1; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .achievement-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; }
-  }
+/* ── RESPONSIVE ── */
+@media(max-width:1000px){
+  .hero-content,.about-layout,.skills-layout,.clayout{grid-template-columns:1fr}
+  .hero-left{padding:7rem 0 3rem}
+  .hero-right{padding:0 0 3rem}
+  .exp-grid,.rgrid,.ocard-body{grid-template-columns:1fr}
+  .rpoints,.sgrid{grid-template-columns:1fr}
+  .edu-item{grid-template-columns:1fr}
+  .edu-item::before,.edu-item::after{display:none}
+  .ebody{padding-left:0;padding-top:1rem}
+  .section{padding:5rem 5vw}
+  nav{padding:1rem 5vw}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-cta{display:none}
+}
+@media(max-width:600px){
+  .hero-name{font-size:clamp(2.6rem,10vw,3.8rem)}
+  .sh{margin-bottom:3rem}
+  .rcard{padding:2rem}
+  .ecard{padding:2rem}
+  .rref{padding:1.8rem}
+}
 </style>
 </head>
 <body>
+<div id="cur"></div>
+<div id="ring"></div>
+<div id="progress-bar"></div>
+<button id="back-top" aria-label="Back to top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- CUSTOM CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#education" onclick="closeMobile()">Education</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#research" onclick="closeMobile()">Research</a>
+  <a href="#skills" onclick="closeMobile()">Skills</a>
+  <a href="#references" onclick="closeMobile()">References</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="#contact" class="mob-cta" onclick="closeMobile()">Get in Touch</a>
+</div>
 
-<!-- BACKGROUND CANVAS -->
-<canvas id="bgCanvas"></canvas>
-
-<!-- NAVIGATION -->
-<nav>
-  <div class="nav-logo">S<span>.</span>L<span>.</span>Verma</div>
+<nav id="mainnav">
+  <a href="#home" class="nav-logo">Sagar<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#research">Research</a></li>
-    <li><a href="#timeline">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#achievements">Recognition</a></li>
+    <li><a href="#references">References</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <div class="nav-right-group">
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<main>
-
-<!-- ========== HERO ========== -->
-<section id="hero">
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">PhD Applicant · Immunology & Viral Pathology</div>
-
-    <h1 class="hero-name glitch" data-text="Sagar Lal Verma">
-      Sagar Lal<br><em>Verma</em>
-    </h1>
-
-    <p class="hero-title">Decoding the immune language of viral disease</p>
-
-    <p class="hero-desc">
-      Independent researcher at the intersection of viral immunopathology, Long COVID, and host–pathogen interaction. Dedicated to translating immunological complexity into actionable insights through rigorous systematic review and AI-assisted research methods.
-    </p>
-
-    <div class="hero-tags">
-      <span class="tag" data-tooltip="Primary focus">Long COVID</span>
-      <span class="tag" data-tooltip="Core methodology">PRISMA 2020</span>
-      <span class="tag" data-tooltip="Research domain">Cytokine Dysregulation</span>
-      <span class="tag" data-tooltip="Emerging interest">Immune Memory</span>
-      <span class="tag" data-tooltip="Technique">Host–Pathogen Interactions</span>
-      <span class="tag" data-tooltip="Tool">AI-Assisted Research</span>
+    <div class="hero-left">
+      <div class="eyebrow"><span>Open to PhD opportunities</span></div>
+      <h1 class="hero-name">Sagar Lal<br><em>Verma</em></h1>
+      <p class="hero-title">
+        <strong>PhD Applicant · Immunology &amp; Viral Pathology</strong><br>
+        Systematic reviews, Long COVID research, and AI-assisted literature synthesis. Bridging rigorous science with meaningful academic mentorship.
+      </p>
+      <div class="hero-btns">
+        <a href="#research" class="btn-gold">View Research →</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+        <a href="mailto:research@sagarlalverma.com.np?subject=CV Request" class="btn-cv"><i class="fas fa-file-alt"></i> Request CV</a>
+      </div>
     </div>
-
-    <div class="hero-cta">
-      <a href="#contact" class="btn-primary"><span>Get in Touch</span></a>
-      <a href="#research" class="btn-ghost">View Research</a>
-    </div>
-  </div>
-
-  <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-num">3+</span>
-      <span class="stat-label">Years Independent<br>Research</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">73%</span>
-      <span class="stat-label">M.Sc. Score<br>First Division</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">100+</span>
-      <span class="stat-label">Students<br>Guided</span>
+    <div class="hero-right">
+      <div class="scard">
+        <div class="sbig" data-count="73" data-suffix="%">73%</div>
+        <div><div class="slabel">M.Sc. Score</div><div class="sdesc">First Division · Immunology Specialization · Kumaun University</div></div>
+      </div>
+      <div class="scard">
+        <div class="sbig">Top<br><span style="font-size:1.8rem" data-count="5" data-suffix="%">5%</span></div>
+        <div><div class="slabel">Academic Ranking</div><div class="sdesc">Rated by Dr. Shankar Mondal, PhD (AIIMS, New Delhi)</div></div>
+      </div>
+      <div class="scard">
+        <div class="sbig" data-count="100" data-suffix="+">100+</div>
+        <div><div class="slabel">Students Guided</div><div class="sdesc">US graduate pathways via UCAN Consultancy, Kathmandu</div></div>
+      </div>
+      <div class="scard">
+        <div class="sbig" data-count="3" data-suffix="+">3+</div>
+        <div><div class="slabel">Years Researching</div><div class="sdesc">Independent immunology &amp; systematic review research since 2022</div></div>
+      </div>
     </div>
   </div>
+  <div class="hscroll"><span>Scroll</span><div class="sline"></div></div>
+</section>
 
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="slabel2"><span>01 — About</span></div>
+    <h2 class="sh">A scientist pursuing <em>discovery,</em><br>a mentor shaping futures</h2>
+    <div class="about-layout">
+      <div class="about-text anim">
+        <p class="lead">"I am actively seeking fully funded PhD opportunities to transition into experimental immunology."</p>
+        <p>Independent researcher specializing in Immunology and Viral Pathology, currently focused on a systematic review of immune dysregulation in Long COVID using PRISMA methodology. With a Master's in Zoology (specialization in Immunology, First Division 73.1%) from Kumaun University, I have a strong background in host–pathogen interactions and viral immunopathology.</p>
+        <p>I integrate AI-assisted tools like Elicit and Rayyan into my research workflow and am currently expanding my skills in R programming and biostatistics. My M.Sc. dissertation — a PRISMA-based systematic review of COVID-19 immunopathology — was supervised by Dr. Shankar Mondal, PhD (AIIMS, New Delhi), who rated me in the top 5% of students.</p>
+        <p>Alongside research, I serve as a Certified USA Counselor at UCAN (Ultimate Consultancy &amp; Advisory Network), having guided 100+ students through US graduate applications, SOP development, and scholarship research.</p>
+        <div class="brow">
+          <span class="badge bg">PhD Applicant</span>
+          <span class="badge bg">Viral Immunopathology</span>
+          <span class="badge bo">Long COVID</span>
+          <span class="badge bo">Systematic Review</span>
+          <span class="badge bg">PRISMA</span>
+        </div>
+      </div>
+      <div class="dlist anim">
+        <div class="drow"><span class="dk">Full Name</span><span class="dv">Sagar Lal Verma</span></div>
+        <div class="drow"><span class="dk">Location</span><span class="dv">Kathmandu, Nepal</span></div>
+        <div class="drow"><span class="dk">Specialization</span><span class="dv">Immunology &amp; Viral Pathology</span></div>
+        <div class="drow"><span class="dk">Current Research</span><span class="dv">Long COVID &amp; Immune Dysregulation</span></div>
+        <div class="drow"><span class="dk">Current Role</span><span class="dv">Certified USA Counselor — UCAN</span></div>
+        <div class="drow"><span class="dk">Keywords</span><span class="dv">Viral Immunopathology · Long COVID · Systematic Review · PRISMA</span></div>
+        <div class="drow"><span class="dk">Languages</span><span class="dv">Nepali · Hindi · English (Fluent)</span></div>
+        <div class="drow"><span class="dk">Email</span><span class="dv"><a href="mailto:research@sagarlalverma.com.np">research@sagarlalverma.com.np</a></span></div>
+        <div class="drow"><span class="dk">Website</span><span class="dv"><a href="https://www.sagarlalverma.com.np/" target="_blank" rel="noopener">sagarlalverma.com.np</a></span></div>
+        <div class="drow"><span class="dk">Phone</span><span class="dv"><a href="tel:+9779705518670">+977 9705518670</a></span></div>
+        <div class="drow"><span class="dk">LinkedIn</span>
+          <span class="dv"><a href="https://www.linkedin.com/in/sagar-verma-86a738296/" target="_blank" rel="noopener" class="li-a">
+            <i class="fab fa-linkedin" style="color:var(--linkedin);font-size:1.1em;"></i> sagar-verma-86a738296
+          </a></span>
+        </div>
+        <div class="drow"><span class="dk">ORCID iD</span>
+          <span class="dv"><a href="https://orcid.org/0009-0003-8773-0160" target="_blank" rel="noopener" class="orcid-a">
+            <i class="fab fa-orcid"></i> 0009-0003-8773-0160
+          </a></span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ========== ABOUT ========== -->
-<section id="about">
-  <div class="section-label">01 — Profile</div>
-  <h2 class="section-title">About <em>Me</em></h2>
-
-  <div class="about-grid">
-    <div class="about-left reveal">
-      <div class="location-badge">
-        <span class="location-dot"></span>
-        Kathmandu, Nepal
+<section class="section" id="education">
+  <div class="section-inner">
+    <div class="slabel2"><span>02 — Education</span></div>
+    <h2 class="sh">Academic <em>foundation</em><br>in life sciences</h2>
+    <div class="edu-list">
+      <div class="edu-item anim">
+        <div><div class="eyr">2019 – 2021</div><div class="einst">Kumaun University<br>Nainital, Uttarakhand, India</div></div>
+        <div class="ebody">
+          <h3>Master of Science (M.Sc.) — Zoology</h3>
+          <div class="esub">Specialization: Immunology (Fundamentals &amp; Applied) · Kumaun University</div>
+          <p>Intensive two-year program covering Immunology, Molecular Biology, Cytogenetics, Mammalian Endocrinology, Biochemistry, Animal Physiology, Biotechnology, Bioinstrumentation &amp; Biostatistics. Culminated in a PRISMA-based systematic review of COVID-19 immunopathology supervised by Dr. Shankar Mondal, PhD (AIIMS, New Delhi). Rated in the top 5% of students for academic performance and leadership.</p>
+          <span class="epill">First Division · 73.1%</span>
+          <span class="epill alt">Supervisor: Dr. Shankar Mondal, PhD (AIIMS)</span>
+        </div>
       </div>
-
-      <p>
-        I am a <strong>research scholar specializing in immunology and viral pathology</strong>, currently seeking PhD opportunities where I can contribute to understanding how the immune system responds—and sometimes fails—in the face of viral infection.
-      </p>
-      <p>
-        My academic journey began at Kumaun University, where I completed my M.Sc. in Zoology with a specialization in Immunology, graduating First Division with 73.1%. My master's dissertation—a systematic review of COVID-19 conducted during the height of the pandemic—ignited a deep fascination with <strong>post-viral immune dysregulation and Long COVID syndromes</strong>.
-      </p>
-
-      <blockquote>
-        "The immune system does not simply fight infection—it remembers, adapts, and sometimes loses its way. Understanding this is the foundation of modern medicine."
-      </blockquote>
-
-      <p>
-        Since graduation, I have been conducting independent research, refining PRISMA-guided systematic review methodology, and building expertise in AI-assisted research tools. I bring both <strong>scientific rigor and genuine curiosity</strong> to every investigation.
-      </p>
-
-      <div class="sep"></div>
-
-      <p style="font-size:0.85rem; color: var(--text-dim);">
-        Rated among the <strong style="color:var(--gold)">top 5% of students</strong> by supervisor Dr. Shankar Mondal (AIIMS, New Delhi) · English medium certificate available
-      </p>
+      <div class="edu-item anim">
+        <div><div class="eyr">2016 – 2019</div><div class="einst">Kumaun University<br>Nainital, Uttarakhand, India</div></div>
+        <div class="ebody">
+          <h3>Bachelor of Science (B.Sc.) — Biological Sciences</h3>
+          <div class="esub">Major: Botany · Chemistry · Zoology · Kumaun University</div>
+          <p>Comprehensive undergraduate program building a strong foundation across Botany, Chemistry, and Zoology. Developed hands-on laboratory and field research skills through ecological study programs and excursions. All instruction in English medium (5-year certificate available).</p>
+          <span class="epill">First Division · 62.0%</span>
+          <span class="epill alt">Medium of Instruction: English</span>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="about-right reveal">
-      <div style="margin-bottom:2rem;">
-        <div class="section-label" style="margin-bottom:1rem;">Research Interests</div>
-        <div class="interests-grid">
-          <div class="interest-card">
-            <span class="interest-icon">🦠</span>
-            <span class="interest-name">Viral Immuno­pathology</span>
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="slabel2"><span>03 — Experience</span></div>
+    <h2 class="sh">Research, counseling &amp; <em>academic</em><br>professional journey</h2>
+    <div class="exp-grid">
+      <div class="ecard anim">
+        <div class="enum">01</div>
+        <div class="erole">Certified USA Counselor</div>
+        <div class="eorg">Ultimate Consultancy &amp; Advisory Network (UCAN) · Kathmandu, Nepal</div>
+        <div class="eperiod">Dec 2025 — Present</div>
+        <ul>
+          <li>Guide students through US university applications, SOP development, and documentation</li>
+          <li>Evaluate academic and research profiles; match students to suitable graduate programs and funding opportunities</li>
+          <li>Conduct workshops on admissions strategies, personal statements, and research proposal writing</li>
+          <li>Develop skills in academic writing, content writing, and scholarship research</li>
+          <li>Assisted 100+ students in navigating international graduate education pathways</li>
+        </ul>
+      </div>
+      <div class="ecard anim">
+        <div class="enum">02</div>
+        <div class="erole">Independent Researcher</div>
+        <div class="eorg">SL Verma Research Hub · Immunology &amp; Infectious Diseases · Kathmandu, Nepal</div>
+        <div class="eperiod">Jan 2022 — Present</div>
+        <ul>
+          <li>Conducting systematic review on immune dysregulation and post-viral syndromes (Long COVID) using PRISMA 2020</li>
+          <li>Analyze host–pathogen interactions and immune response mechanisms in viral immunopathology</li>
+          <li>Utilize AI-assisted tools (Elicit, Rayyan, ChatGPT) for literature screening and synthesis</li>
+          <li>Manage references with Zotero and Mendeley; training in biostatistics and R programming</li>
+        </ul>
+      </div>
+      <div class="ecard anim">
+        <div class="enum">03</div>
+        <div class="erole">Master's Dissertation Research</div>
+        <div class="eorg">Kumaun University · Dept. of Zoology · Nainital, India</div>
+        <div class="eperiod">Oct 2020 — Oct 2021</div>
+        <ul>
+          <li>Conducted a comprehensive systematic review of COVID-19 pathogenesis, immune responses, and therapeutics</li>
+          <li>Analyzed viral immunology mechanisms, host–pathogen interactions, and emerging SARS-CoV-2 variants</li>
+          <li>Synthesized immunological, virological, and clinical literature to understand infection dynamics</li>
+          <li>Developed strong scientific writing, critical appraisal, and literature synthesis skills</li>
+        </ul>
+      </div>
+      <div class="ecard anim">
+        <div class="enum">04</div>
+        <div class="erole">Academic Achievements &amp; Outreach</div>
+        <div class="eorg">Kumaun University · ASPIRE Program &amp; Community Initiatives</div>
+        <div class="eperiod">2016 — 2021</div>
+        <ul>
+          <li>Rated among top 5% of students by Dr. Shankar Mondal, PhD (AIIMS) for academic performance and leadership</li>
+          <li>Active participant in ASPIRE and community science awareness programs</li>
+          <li>Published handwritten wall magazines for science communication and outreach</li>
+          <li>All education conducted in English medium (5-year certificate available)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="section-inner">
+    <div class="slabel2"><span>04 — Research</span></div>
+    <h2 class="sh">Dissertation &amp; <em>ongoing</em><br>scientific contributions</h2>
+    <div class="rcard anim">
+      <div class="rtag">Ongoing Research · Independent · Jan 2022 – Present</div>
+      <div class="rtitle">"Immune Dysregulation &amp; Post-Viral Syndromes in Long COVID"</div>
+      <div class="rsuper">Independent Researcher · SL Verma Research Hub · Kathmandu, Nepal · PRISMA 2020 · Tools: Elicit, Rayyan, Zotero, Mendeley</div>
+      <div class="rpoints">
+        <div class="rp"><p>Conducting a systematic literature review investigating immune dysregulation mechanisms underlying Long COVID and post-viral fatigue syndromes using PRISMA 2020 methodology.</p></div>
+        <div class="rp"><p>Analyzing host–pathogen interaction data and cytokine dysregulation patterns from PubMed, Google Scholar, and Scopus databases.</p></div>
+        <div class="rp"><p>Utilizing AI-assisted screening tools (Elicit, Rayyan) and reference managers (Zotero, Mendeley) for structured and reproducible literature synthesis.</p></div>
+        <div class="rp"><p>Undertaking concurrent training in biostatistics and R programming to strengthen quantitative research methodology.</p></div>
+      </div>
+    </div>
+    <div class="rcard anim">
+      <div class="rtag">M.Sc. Dissertation · Kumaun University · Oct 2020 – Oct 2021</div>
+      <div class="rtitle">"Corona Virus Disease-2019: A Systematic Review"</div>
+      <div class="rsuper">Supervisor: Dr. Shankar Mondal, PhD [AIIMS, New Delhi] · Dept. of Zoology, PNG Govt. PG College, Kumaun University</div>
+      <div class="rpoints">
+        <div class="rp"><p>Conducted a comprehensive systematic review of COVID-19 disease mechanisms, immune response pathways, and clinical outcomes using the PRISMA framework.</p></div>
+        <div class="rp"><p>Analyzed peer-reviewed literature on SARS-CoV-2 immunopathology, cytokine storm mechanisms, and innate immune evasion strategies from PubMed and Scopus.</p></div>
+        <div class="rp"><p>Reviewed emerging vaccine development strategies including mRNA, viral vector, and subunit vaccine platforms during the early pandemic period.</p></div>
+        <div class="rp"><p>Applied structured database search strategy with data extraction and critical appraisal — building strong scientific writing and synthesis skills.</p></div>
+      </div>
+    </div>
+    <div class="rinterests anim">
+      <p>Research Interests</p>
+      <div class="itags">
+        <span class="itag">Viral Immunopathology</span>
+        <span class="itag">Long COVID &amp; Post-Viral Syndromes</span>
+        <span class="itag">Host–Pathogen Interactions</span>
+        <span class="itag">Immune Dysregulation &amp; Cytokine Response</span>
+        <span class="itag">Immune Memory &amp; Vaccine Response</span>
+        <span class="itag">Emerging Infectious Diseases</span>
+        <span class="itag">Systematic Review Methodology</span>
+        <span class="itag">AI-Assisted Research</span>
+      </div>
+    </div>
+    <div class="ocard anim">
+      <div class="ocard-hdr">
+        <i class="fab fa-orcid"></i>
+        <div>
+          <div class="ocard-title">ORCID Verified Profile</div>
+          <a href="https://orcid.org/0009-0003-8773-0160" target="_blank" rel="noopener" class="ocard-link">orcid.org/0009-0003-8773-0160</a>
+        </div>
+      </div>
+      <div class="ocard-body">
+        <div>
+          <div class="ocol-title">Works</div>
+          <div class="oentry">
+            <div class="oentry-meta">Dissertation / Thesis · 2021-10-01</div>
+            <div class="oentry-name">Corona Virus Disease-2019: A Systematic Review</div>
           </div>
-          <div class="interest-card">
-            <span class="interest-icon">⚔️</span>
-            <span class="interest-name">Host–Pathogen Interactions</span>
+        </div>
+        <div>
+          <div class="ocol-title">Distinctions &amp; Invited Positions</div>
+          <div class="oentry">
+            <div class="oentry-meta">Kumaun University · Distinction</div>
+            <div class="oentry-name">Ranked in the Top 5% of students — cited by Dr. Shankar Mondal (Immunology Specialization)</div>
           </div>
-          <div class="interest-card">
-            <span class="interest-icon">🔬</span>
-            <span class="interest-name">Long COVID & Post-Viral Syndromes</span>
-          </div>
-          <div class="interest-card">
-            <span class="interest-icon">🌡️</span>
-            <span class="interest-name">Cytokine Response & Dysregulation</span>
-          </div>
-          <div class="interest-card">
-            <span class="interest-icon">💉</span>
-            <span class="interest-name">Immune Memory & Vaccine Response</span>
-          </div>
-          <div class="interest-card">
-            <span class="interest-icon">🧬</span>
-            <span class="interest-name">Emerging Infectious Diseases</span>
+          <div class="oentry">
+            <div class="oentry-meta">Kumaun University · Distinction</div>
+            <div class="oentry-name">Participation in ASPIRE programs and community science awareness</div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div>
-        <div class="section-label" style="margin-bottom:1rem;">Currently</div>
-        <div style="padding:1.5rem; border:1px solid var(--border); background:var(--surface);">
-          <p style="font-size:0.85rem; line-height:1.7; color:var(--text-dim); margin-bottom:1rem;">
-            📚 Conducting systematic review on <span style="color:var(--accent3)">immune dysregulation in post-viral syndromes</span>
-          </p>
-          <p style="font-size:0.85rem; line-height:1.7; color:var(--text-dim); margin-bottom:1rem;">
-            📊 Training in <span style="color:var(--accent3)">biostatistics & R programming</span>
-          </p>
-          <p style="font-size:0.85rem; line-height:1.7; color:var(--text-dim);">
-            🎓 Actively seeking <span style="color:var(--accent3)">PhD programs</span> in Immunology / Infectious Disease
-          </p>
+<section class="section" id="skills">
+  <div class="section-inner">
+    <div class="slabel2"><span>05 — Skills</span></div>
+    <h2 class="sh">Technical &amp; <em>professional</em><br>competencies</h2>
+    <div class="skills-layout">
+      <div class="skills-intro anim">
+        <p>A blend of rigorous scientific training, AI-assisted research methodology, and academic counseling expertise — spanning immunology research to international graduate education consulting.</p>
+        <br>
+        <p>Every skill listed here has been actively applied in research settings, academic institutions, and counseling offices — not just learned in theory.</p>
+        <br>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Immunology &amp; Viral Pathology</span><span>90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--target:90%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Systematic Review (PRISMA)</span><span>88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--target:88%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>AI-Assisted Research Tools</span><span>82%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--target:82%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Academic Counseling &amp; Mentoring</span><span>92%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--target:92%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Scientific Writing</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--target:85%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Biostatistics &amp; R (Training)</span><span>55%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--target:55%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sgrid">
+        <div class="sblock anim anim-d1">
+          <h4>Research Methods</h4>
+          <div class="stags">
+            <span class="stag">Systematic Review</span><span class="stag">PRISMA 2020</span><span class="stag">PubMed</span>
+            <span class="stag">Google Scholar</span><span class="stag">Scopus</span><span class="stag">Critical Appraisal</span>
+            <span class="stag">Data Extraction</span><span class="stag">Scientific Writing</span><span class="stag">Host–Pathogen Analysis</span>
+          </div>
+        </div>
+        <div class="sblock anim anim-d2">
+          <h4>Biological Sciences</h4>
+          <div class="stags">
+            <span class="stag">Immunology</span><span class="stag">Viral Pathology</span><span class="stag">Molecular Biology</span>
+            <span class="stag">Cell Biology</span><span class="stag">Microbiology</span><span class="stag">Cytogenetics</span>
+            <span class="stag">Biostatistics</span><span class="stag">Microscopy</span>
+          </div>
+        </div>
+        <div class="sblock anim anim-d3">
+          <h4>AI &amp; Research Tools</h4>
+          <div class="stags">
+            <span class="stag">Elicit</span><span class="stag">Rayyan</span><span class="stag">ChatGPT (Research)</span>
+            <span class="stag">Zotero</span><span class="stag">Mendeley</span><span class="stag">R Programming (Training)</span>
+            <span class="stag">MS Office Suite</span><span class="stag">Academic Writing</span>
+          </div>
+        </div>
+        <div class="sblock anim anim-d4">
+          <h4>Counseling &amp; Languages</h4>
+          <div class="stags">
+            <span class="stag">US University Admissions</span><span class="stag">SOP Writing</span><span class="stag">Student Mentoring</span>
+            <span class="stag">Seminar Facilitation</span><span class="stag">Scholarship Research</span>
+            <span class="stag">English — Fluent</span><span class="stag">Hindi — Native</span><span class="stag">Nepali — Native</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== RESEARCH ========== -->
-<section id="research">
-  <div class="section-label">02 — Research</div>
-  <h2 class="section-title">Research <em>Work</em></h2>
-  <p class="section-subtitle">Systematic, rigorous investigation of immunological mechanisms in viral disease — from COVID-19 pathogenesis to ongoing Long COVID inquiry.</p>
-
-  <div class="research-grid reveal">
-    <div class="research-card featured">
-      <div class="research-meta">
-        <span>Ongoing · 2022–Present</span>
-        <span class="badge">Primary Research</span>
+<section class="section" id="references">
+  <div class="section-inner">
+    <div class="slabel2"><span>06 — References</span></div>
+    <h2 class="sh">Academic <em>references</em><br>&amp; supervisors</h2>
+    <div class="rgrid">
+      <div class="rref anim">
+        <div class="rref-name">Dr. Shankar Mondal, PhD</div>
+        <div class="rref-title">Assistant Professor, Department of Zoology<br>PNG Government Postgraduate College, Kumaun University<br><em>M.Sc. Dissertation Supervisor (AIIMS, New Delhi)</em></div>
+        <div class="rref-contacts">
+          <a href="mailto:shankar.mondal@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+            shankar.mondal@gmail.com
+          </a>
+          <a href="tel:+917351111497">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+            +91 7351111497
+          </a>
+        </div>
       </div>
-      <h3>Immune Dysregulation in Post-Viral Syndromes (Long COVID) — Systematic Review</h3>
-      <p>
-        A comprehensive PRISMA 2020-guided systematic review investigating the immunological mechanisms underlying Long COVID and post-acute sequelae of SARS-CoV-2 infection. This work examines persistent immune activation, cytokine dysregulation, autoimmune phenomena, and the role of viral reservoirs in driving chronic symptoms. AI-assisted tools including Elicit and Rayyan are employed for rigorous literature screening across PubMed, Google Scholar, and related databases.
-      </p>
-      <div class="research-tags">
-        <span class="r-tag">PRISMA 2020</span>
-        <span class="r-tag">Long COVID</span>
-        <span class="r-tag">Cytokine Dysregulation</span>
-        <span class="r-tag">Post-viral Syndromes</span>
-        <span class="r-tag">Immune Activation</span>
-        <span class="r-tag">AI-assisted Screening</span>
-      </div>
-    </div>
-
-    <div class="research-card">
-      <div class="research-meta">
-        <span>2020–2021 · M.Sc. Dissertation</span>
-        <span class="badge">Completed</span>
-      </div>
-      <h3>COVID-19: A Systematic Review of Pathogenesis, Immunity & Therapeutics</h3>
-      <p>
-        Master's dissertation conducted under supervision of Dr. Shankar Mondal (AIIMS, New Delhi). Synthesized immunological, virological, and clinical literature to understand SARS-CoV-2 infection dynamics, host immune responses, and therapeutic strategies during the height of the global pandemic.
-      </p>
-      <div class="research-tags">
-        <span class="r-tag">COVID-19</span>
-        <span class="r-tag">SARS-CoV-2</span>
-        <span class="r-tag">Immunopathology</span>
-        <span class="r-tag">Systematic Review</span>
-      </div>
-    </div>
-
-    <div class="research-card">
-      <div class="research-meta">
-        <span>Ongoing · Independent</span>
-        <span class="badge">Analysis</span>
-      </div>
-      <h3>Host–Pathogen Interaction Mapping in Emerging Viral Diseases</h3>
-      <p>
-        Ongoing analysis of mechanisms by which emerging viruses hijack, evade, and modulate host immune responses. Focus on identifying conserved immune evasion strategies and potential therapeutic targets across viral families.
-      </p>
-      <div class="research-tags">
-        <span class="r-tag">Host–Pathogen</span>
-        <span class="r-tag">Immune Evasion</span>
-        <span class="r-tag">Emerging Viruses</span>
+      <div class="rref anim">
+        <div class="rref-name">Dr. Rakesh Verma, PhD</div>
+        <div class="rref-title">Assistant Professor, Campus Head &amp; Vice Proctor<br>SSJ University, LSM Campus Pithoragarh<br><em>Uttarakhand, India</em></div>
+        <div class="rref-contacts">
+          <a href="mailto:rv.pith@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+            rv.pith@gmail.com
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== TIMELINE ========== -->
-<section id="timeline">
-  <div class="section-label">03 — Journey</div>
-  <h2 class="section-title">Academic & Professional <em>Timeline</em></h2>
-  <p class="section-subtitle">A trajectory built on curiosity, resilience, and a commitment to rigorous science.</p>
+<div class="cta-strip">
+  <h2>Let's Collaborate on Research or Education</h2>
+  <p>Open to PhD programs, research collaborations, academic counseling roles, and science communication projects.</p>
+  <a href="#contact" class="btn-gold" style="display:inline-flex;position:relative;">Start a Conversation →</a>
+</div>
 
-  <div class="timeline-container">
-    <div class="timeline-line"></div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">Dec 2025 – Present</div>
-      <h3>Certified USA Counselor</h3>
-      <div class="timeline-org">Ultimate Consultancy & Advisory Network (UCAN) · Kathmandu, Nepal</div>
-      <ul>
-        <li>Guided 100+ students through US university applications, SOP development, and documentation</li>
-        <li>Evaluated academic profiles and matched students to graduate programs and funding opportunities</li>
-        <li>Conducted workshops on admissions strategy, personal statements, and research proposal writing</li>
-        <li>Developed expertise in academic writing, statement of purpose crafting, and scholarship research</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">Jan 2022 – Present</div>
-      <h3>Independent Researcher</h3>
-      <div class="timeline-org">Immunology, Infectious Diseases & Systematic Reviews · Self-directed</div>
-      <ul>
-        <li>Conducting PRISMA 2020 systematic review on immune dysregulation and Long COVID</li>
-        <li>Analyzing host–pathogen interactions and immune response mechanisms in viral disease</li>
-        <li>Utilizing AI-assisted tools (Elicit, Rayyan, ChatGPT) for literature screening and synthesis</li>
-        <li>Managing references using Zotero and Mendeley; training in R programming and biostatistics</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">Oct 2020 – Oct 2021</div>
-      <h3>Master's Dissertation</h3>
-      <div class="timeline-org">Kumaun University · Supervisor: Dr. Shankar Mondal, PhD (AIIMS, New Delhi)</div>
-      <p>
-        Conducted a comprehensive systematic review of COVID-19 during the global pandemic. Analyzed viral immunology, host–pathogen interactions, therapeutic approaches, and emerging variants. Developed strong skills in scientific literature analysis, critical methodology evaluation, and scientific writing.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">2019 – 2021</div>
-      <h3>M.Sc. Zoology — Immunology Specialization</h3>
-      <div class="timeline-org">Kumaun University, Nainital, Uttarakhand, India · First Division (73.1%)</div>
-      <p>
-        Advanced coursework in Immunology (Fundamentals & Applied), Molecular Biology, Cytogenetics, Mammalian Endocrinology, Biochemistry, Animal Physiology, Biotechnology, and Biostatistics. Rated top 5% of class by supervisor.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">2016 – 2019</div>
-      <h3>B.Sc. Biological Sciences</h3>
-      <div class="timeline-org">Kumaun University, Nainital, Uttarakhand, India · First Division (62.0%)</div>
-      <p>
-        Foundation in Botany, Chemistry, and Zoology. Developed core scientific reasoning and laboratory skills that underpin all subsequent research work.
-      </p>
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="slabel2"><span>07 — Contact</span></div>
+    <h2 class="sh">Let's <em>connect</em> and<br>create together</h2>
+    <div class="clayout">
+      <div class="cleft anim">
+        <h3>Open to PhD programs, research &amp; academic counseling</h3>
+        <br>
+        <p>Available for PhD opportunities in Immunology &amp; Viral Pathology, research collaborations, academic counseling roles, and science communication projects. If you're looking for someone who brings both scientific depth and genuine passion for student success — let's talk.</p>
+      </div>
+      <div class="clist anim">
+        <a class="citem" href="mailto:research@sagarlalverma.com.np">
+          <div class="cicon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg></div>
+          <div><div class="clabel">Email</div><div class="cval">research@sagarlalverma.com.np</div></div>
+        </a>
+        <a class="citem cw" href="https://www.sagarlalverma.com.np/" target="_blank" rel="noopener">
+          <div class="cicon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg></div>
+          <div><div class="clabel">Website</div><div class="cval">sagarlalverma.com.np</div></div>
+        </a>
+        <a class="citem" href="tel:+9779705518670">
+          <div class="cicon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg></div>
+          <div><div class="clabel">Phone</div><div class="cval">+977 9705518670</div></div>
+        </a>
+        <a class="citem co" href="https://orcid.org/0009-0003-8773-0160" target="_blank" rel="noopener">
+          <div class="cicon" style="background:var(--orcid);"><i class="fab fa-orcid"></i></div>
+          <div><div class="clabel">ORCID iD</div><div class="cval">0009-0003-8773-0160</div></div>
+        </a>
+        <a class="citem cl" href="https://www.linkedin.com/in/sagar-verma-86a738296/" target="_blank" rel="noopener">
+          <div class="cicon" style="background:var(--linkedin);"><i class="fab fa-linkedin"></i></div>
+          <div><div class="clabel">LinkedIn</div><div class="cval">linkedin.com/in/sagar-verma-86a738296</div></div>
+        </a>
+        <a class="citem" href="https://maps.google.com/?q=Kathmandu,Nepal" target="_blank" rel="noopener">
+          <div class="cicon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg></div>
+          <div><div class="clabel">Location</div><div class="cval">Kathmandu, Nepal</div></div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- ========== SKILLS ========== -->
-<section id="skills">
-  <div class="section-label">04 — Capabilities</div>
-  <h2 class="section-title">Skills & <em>Expertise</em></h2>
-  <p class="section-subtitle">A carefully assembled technical and methodological toolkit, refined through rigorous academic training and independent research.</p>
-
-  <div class="skills-grid reveal">
-    <div class="skill-category">
-      <div class="skill-cat-title"><span class="skill-cat-icon">🔬</span> Research Methods</div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Systematic Literature Review</span>
-          <span class="skill-level">Expert</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">PRISMA 2020 Methodology</span>
-          <span class="skill-level">Expert</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Critical Appraisal</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Scientific Writing</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-cat-title"><span class="skill-cat-icon">🧬</span> Scientific Knowledge</div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Viral Immunopathology</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Host–Pathogen Interactions</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Immune Dysregulation / Long COVID</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Molecular Biology (Theory)</span>
-          <span class="skill-level">Proficient</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-cat-title"><span class="skill-cat-icon">💻</span> Tools & Technology</div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">AI Research Tools (Elicit, Rayyan)</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">Zotero / Mendeley</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">PubMed / Google Scholar</span>
-          <span class="skill-level">Expert</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header">
-          <span class="skill-name">R Programming (in training)</span>
-          <span class="skill-level">Learning</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="40"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="language-grid reveal">
-    <div class="lang-badge">
-      <span class="lang-name">English</span>
-      <span class="lang-level">Fluent</span>
-    </div>
-    <div class="lang-badge">
-      <span class="lang-name">Hindi</span>
-      <span class="lang-level">Native</span>
-    </div>
-    <div class="lang-badge">
-      <span class="lang-name">Nepali</span>
-      <span class="lang-level">Native</span>
-    </div>
-  </div>
-</section>
-
-<!-- ========== ACHIEVEMENTS ========== -->
-<section id="achievements">
-  <div class="section-label">05 — Recognition</div>
-  <h2 class="section-title">Achievements & <em>Recognition</em></h2>
-
-  <div class="achievement-grid reveal">
-    <div class="achievement-card">
-      <span class="achievement-icon">🏅</span>
-      <h3>First Division, M.Sc. Immunology</h3>
-      <p>Graduated with First Division distinction scoring 73.1% in M.Sc. Zoology with Immunology specialization from Kumaun University.</p>
-      <span class="achievement-highlight">Score: 73.1% · First Division</span>
-    </div>
-
-    <div class="achievement-card">
-      <span class="achievement-icon">⭐</span>
-      <h3>Top 5% of Class</h3>
-      <p>Rated among the top 5% of students by supervisor Dr. Shankar Mondal (AIIMS, New Delhi) for academic performance and demonstrated leadership.</p>
-      <span class="achievement-highlight">Supervisor Commendation · AIIMS</span>
-    </div>
-
-    <div class="achievement-card">
-      <span class="achievement-icon">📜</span>
-      <h3>Pandemic-Era Dissertation</h3>
-      <p>Produced a high-quality systematic review on COVID-19 during the global pandemic, demonstrating exceptional initiative, independence, and research capability under challenging conditions.</p>
-      <span class="achievement-highlight">2020–2021 · During Global Pandemic</span>
-    </div>
-
-    <div class="achievement-card">
-      <span class="achievement-icon">🎓</span>
-      <h3>100+ Students Mentored</h3>
-      <p>Successfully guided over 100 students through international graduate admissions pathways, developing deep expertise in academic writing and research communication.</p>
-      <span class="achievement-highlight">UCAN · 2025–Present</span>
-    </div>
-
-    <div class="achievement-card">
-      <span class="achievement-icon">🤝</span>
-      <h3>ASPIRE Community Programs</h3>
-      <p>Active participant in ASPIRE and community awareness programs, demonstrating commitment to science communication and public health engagement beyond the laboratory.</p>
-      <span class="achievement-highlight">Community Engagement</span>
-    </div>
-
-    <div class="achievement-card">
-      <span class="achievement-icon">🌐</span>
-      <h3>English Medium Certification</h3>
-      <p>Holds a 5-year English medium instruction certificate, enabling seamless integration into international PhD programs and global research collaborations.</p>
-      <span class="achievement-highlight">5-Year Certificate Available</span>
-    </div>
-  </div>
-
-  <div class="sep" style="margin-top:4rem;"></div>
-  <div class="section-label" style="margin:2rem 0 1.5rem;">References Available</div>
-  <div style="display:flex; gap:2rem; flex-wrap:wrap;" class="reveal">
-    <div style="padding:1.5rem 2rem; border:1px solid var(--border); background:var(--surface); flex:1; min-width:280px;">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--text-bright); margin-bottom:0.3rem;">Dr. Shankar Mondal, PhD</div>
-      <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.8rem;">Dissertation Supervisor</div>
-      <div style="font-size:0.8rem; color:var(--text-dim); line-height:1.6;">Asst. Professor, Dept. of Zoology<br>PNG Govt. PG College, Kumaun University</div>
-    </div>
-    <div style="padding:1.5rem 2rem; border:1px solid var(--border); background:var(--surface); flex:1; min-width:280px;">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--text-bright); margin-bottom:0.3rem;">Dr. Rakesh Verma, PhD</div>
-      <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.8rem;">Academic Reference</div>
-      <div style="font-size:0.8rem; color:var(--text-dim); line-height:1.6;">Asst. Professor, Campus Head & Vice Proctor<br>SSJ University, LSM Campus Pithoragarh</div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CONTACT ========== -->
-<section id="contact">
-  <div class="section-label">06 — Connect</div>
-  <h2 class="section-title">Let's <em>Connect</em></h2>
-  <p class="section-subtitle">I am actively seeking PhD opportunities in immunology, infectious disease, or related fields. Open to collaborations, discussions, and research partnerships globally.</p>
-
-  <div class="contact-cards">
-    <a href="mailto:sagarlalverma.research@gmail.com" class="contact-card">
-      <span class="contact-card-icon">✉️</span>
-      <span class="contact-card-label">Email</span>
-      <span class="contact-card-value">sagarlalverma.research<br>@gmail.com</span>
-    </a>
-    <a href="tel:+9779705518670" class="contact-card">
-      <span class="contact-card-icon">📱</span>
-      <span class="contact-card-label">Phone / WhatsApp</span>
-      <span class="contact-card-value">+977 9705518670</span>
-    </a>
-    <div class="contact-card">
-      <span class="contact-card-icon">📍</span>
-      <span class="contact-card-label">Location</span>
-      <span class="contact-card-value">Kathmandu, Nepal</span>
-    </div>
-  </div>
-
-  <p class="contact-cta-text">Seeking PhD positions in Immunology & Viral Pathology worldwide.</p>
-  <p style="font-family:'Space Mono',monospace; font-size:0.6rem; color:var(--text-dim); letter-spacing:0.2em; text-transform:uppercase;">Available for immediate correspondence</p>
-</section>
-
-</main>
 
 <footer>
-  <div class="footer-copy">© 2025 Sagar Lal Verma · All rights reserved</div>
-  <div class="footer-right">
-    Built with <span>◆</span> precision · Kathmandu, Nepal
-  </div>
+  <div class="flogo">Sagar Lal <span>Verma</span></div>
+  <span>© 2025 · PhD Applicant · Immunology &amp; Viral Pathology</span>
+  <span>Kathmandu, Nepal</span>
 </footer>
 
 <script>
-// ========== CUSTOM CURSOR ==========
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
+(function(){
+  'use strict';
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px';
-  cursor.style.top = my + 'px';
-});
-
-function animateRing() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  ring.style.left = rx + 'px';
-  ring.style.top = ry + 'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
-
-document.querySelectorAll('a, button, .tag, .interest-card, .research-card, .contact-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.width = '20px';
-    cursor.style.height = '20px';
-    ring.style.width = '60px';
-    ring.style.height = '60px';
-    ring.style.borderColor = 'rgba(0,200,180,0.8)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.width = '12px';
-    cursor.style.height = '12px';
-    ring.style.width = '40px';
-    ring.style.height = '40px';
-    ring.style.borderColor = 'rgba(0,200,180,0.5)';
-  });
-});
-
-// ========== BACKGROUND CANVAS ==========
-const canvas = document.getElementById('bgCanvas');
-const ctx = canvas.getContext('2d');
-let W = canvas.width = window.innerWidth;
-let H = canvas.height = window.innerHeight;
-
-window.addEventListener('resize', () => {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-  initParticles();
-});
-
-// Particles (immune cells floating)
-const PARTICLE_COUNT = 80;
-let particles = [];
-
-function Particle() {
-  this.x = Math.random() * W;
-  this.y = Math.random() * H;
-  this.r = Math.random() * 2.5 + 0.5;
-  this.vx = (Math.random() - 0.5) * 0.4;
-  this.vy = (Math.random() - 0.5) * 0.4;
-  this.alpha = Math.random() * 0.6 + 0.1;
-  this.hue = Math.random() > 0.7 ? 175 : Math.random() > 0.5 ? 195 : 45;
-}
-
-function initParticles() {
-  particles = [];
-  for (let i = 0; i < PARTICLE_COUNT; i++) {
-    particles.push(new Particle());
+  /* ── Custom cursor (desktop only) ── */
+  var cur = document.getElementById('cur');
+  var ring = document.getElementById('ring');
+  if(cur && ring && window.matchMedia('(pointer:fine)').matches){
+    var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      cur.style.left=mx+'px'; cur.style.top=my+'px';
+    });
+    (function animRing(){
+      rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12;
+      ring.style.left=rx+'px'; ring.style.top=ry+'px';
+      requestAnimationFrame(animRing);
+    })();
+    document.querySelectorAll('a,button,.ecard,.scard,.rref,.sblock').forEach(function(el){
+      el.addEventListener('mouseenter',function(){
+        cur.style.width='18px'; cur.style.height='18px';
+        ring.style.width='50px'; ring.style.height='50px'; ring.style.opacity='0.3';
+      });
+      el.addEventListener('mouseleave',function(){
+        cur.style.width='10px'; cur.style.height='10px';
+        ring.style.width='36px'; ring.style.height='36px'; ring.style.opacity='0.5';
+      });
+    });
   }
-}
-initParticles();
 
-let mouseX = W / 2, mouseY = H / 2;
-document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+  /* ── Reading progress bar ── */
+  var progressBar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var doc = document.documentElement;
+    var total = doc.scrollHeight - doc.clientHeight;
+    var pct = total > 0 ? (window.scrollY / total) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
 
-function drawFrame() {
-  ctx.clearRect(0, 0, W, H);
+  /* ── Back to top button ── */
+  var backTop = document.getElementById('back-top');
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
 
-  // Draw connections
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 120) {
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        const alpha = (1 - dist / 120) * 0.08;
-        ctx.strokeStyle = `rgba(0,200,180,${alpha})`;
-        ctx.lineWidth = 0.5;
-        ctx.stroke();
+  /* ── Dark mode toggle ── */
+  var darkToggle = document.getElementById('darkToggle');
+  var isDark = localStorage.getItem('darkMode') === 'true';
+  function applyDark(dark){
+    document.body.classList.toggle('dark', dark);
+    darkToggle.innerHTML = dark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    localStorage.setItem('darkMode', dark);
+  }
+  applyDark(isDark);
+  darkToggle.addEventListener('click', function(){
+    isDark = !isDark;
+    applyDark(isDark);
+  });
+
+  /* ── Scroll: nav shrink + active links + progress + back-top ── */
+  var nav = document.getElementById('mainnav');
+  var sections = document.querySelectorAll('section[id], .hero[id]');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll',function(){
+    updateProgress();
+    if(window.scrollY > 60){ nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+    // Back to top
+    if(window.scrollY > 400){ backTop.classList.add('show'); }
+    else { backTop.classList.remove('show'); }
+    var scrollPos = window.scrollY + 120;
+    sections.forEach(function(sec){
+      if(scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight){
+        navLinks.forEach(function(a){ a.classList.remove('active'); });
+        var active = document.querySelector('.nav-links a[href="#'+sec.id+'"]');
+        if(active) active.classList.add('active');
       }
+    });
+  },{passive:true});
+
+  /* ── Animated counters ── */
+  function animateCounter(el){
+    var target = parseInt(el.getAttribute('data-count'),10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var prefix = el.getAttribute('data-prefix') || '';
+    var duration = 1600;
+    var start = null;
+    var originalHTML = el.innerHTML;
+    // Check if there's a br tag (for "Top" cases - skip counter on those)
+    if(el.innerHTML.indexOf('<br>') > -1) return;
+    function step(ts){
+      if(!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      var current = Math.floor(ease * target);
+      el.textContent = prefix + current + suffix;
+      if(progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ── Skill bar animation ── */
+  var skillBarsAnimated = false;
+  function animateSkillBars(){
+    if(skillBarsAnimated) return;
+    var skillsSection = document.getElementById('skills');
+    if(!skillsSection) return;
+    var rect = skillsSection.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.85){
+      skillBarsAnimated = true;
+      document.querySelectorAll('.skill-bar-fill').forEach(function(bar){
+        setTimeout(function(){ bar.classList.add('animated'); }, 200);
+      });
     }
   }
 
-  // Draw & update particles
-  particles.forEach(p => {
-    // Mouse attraction
-    const dx = mouseX - p.x;
-    const dy = mouseY - p.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < 150) {
-      p.vx += dx * 0.00015;
-      p.vy += dy * 0.00015;
-    }
-
-    // Speed limit
-    const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-    if (speed > 1.5) { p.vx *= 0.97; p.vy *= 0.97; }
-
-    p.x += p.vx;
-    p.y += p.vy;
-
-    // Wrap
-    if (p.x < -10) p.x = W + 10;
-    if (p.x > W + 10) p.x = -10;
-    if (p.y < -10) p.y = H + 10;
-    if (p.y > H + 10) p.y = -10;
-
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `hsla(${p.hue}, 100%, 60%, ${p.alpha})`;
-    ctx.fill();
-
-    // Glow
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
-    const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3);
-    grad.addColorStop(0, `hsla(${p.hue}, 100%, 60%, 0.08)`);
-    grad.addColorStop(1, 'transparent');
-    ctx.fillStyle = grad;
-    ctx.fill();
-  });
-
-  requestAnimationFrame(drawFrame);
-}
-drawFrame();
-
-// ========== SCROLL REVEAL ==========
-const revealEls = document.querySelectorAll('.reveal');
-const timelineItems = document.querySelectorAll('.timeline-item');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-revealEls.forEach(el => observer.observe(el));
-timelineItems.forEach(el => observer.observe(el));
-
-// ========== SKILL BARS ==========
-const skillFills = document.querySelectorAll('.skill-fill');
-const skillObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const fill = entry.target;
-      const width = fill.getAttribute('data-width');
-      setTimeout(() => { fill.style.width = width + '%'; }, 200);
-      skillObserver.unobserve(fill);
-    }
-  });
-}, { threshold: 0.5 });
-
-skillFills.forEach(f => skillObserver.observe(f));
-
-// ========== STAT COUNTER ANIMATION ==========
-function animateCounter(el, target, suffix = '', duration = 1500) {
-  const start = Date.now();
-  const update = () => {
-    const elapsed = Date.now() - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(eased * target);
-    el.textContent = current + suffix;
-    if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = target + suffix;
-  };
-  update();
-}
-
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) {
-  const statObserver = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) {
-      const nums = heroStats.querySelectorAll('.stat-num');
-      animateCounter(nums[0], 3, '+');
-      animateCounter(nums[1], 73, '%');
-      animateCounter(nums[2], 100, '+');
-      statObserver.disconnect();
-    }
-  }, { threshold: 0.5 });
-  statObserver.observe(heroStats);
-}
-
-// ========== NAV ACTIVE STATE ==========
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY + 100;
-  sections.forEach(sec => {
-    if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
-      navLinks.forEach(a => a.style.color = '');
-      const active = document.querySelector(`.nav-links a[href="#${sec.id}"]`);
-      if (active) active.style.color = 'var(--accent2)';
-    }
-  });
-});
-
-// ========== PARALLAX HERO ==========
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const heroContent = document.querySelector('.hero-content');
-  if (heroContent && scrollY < window.innerHeight) {
-    heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
-    heroContent.style.opacity = 1 - scrollY / window.innerHeight * 1.2;
+  /* ── Scroll-reveal animations ── */
+  var animEls = document.querySelectorAll('.anim');
+  var countersDone = false;
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12});
+    // Counter observer for hero
+    var heroObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting && !countersDone){
+          countersDone = true;
+          document.querySelectorAll('.sbig[data-count]').forEach(function(el){
+            animateCounter(el);
+          });
+        }
+      });
+    },{threshold:0.5});
+    var heroSection = document.getElementById('home');
+    if(heroSection) heroObserver.observe(heroSection);
+    animEls.forEach(function(el){ observer.observe(el); });
+    // Skill bars observer
+    var skillObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          setTimeout(function(){
+            document.querySelectorAll('.skill-bar-fill').forEach(function(bar, i){
+              setTimeout(function(){ bar.classList.add('animated'); }, i * 120);
+            });
+          }, 300);
+          skillObserver.disconnect();
+        }
+      });
+    },{threshold:0.3});
+    var skillsSection = document.getElementById('skills');
+    if(skillsSection) skillObserver.observe(skillsSection);
+  } else {
+    animEls.forEach(function(el){ el.classList.add('visible'); });
+    document.querySelectorAll('.skill-bar-fill').forEach(function(bar){ bar.classList.add('animated'); });
   }
-});
 
-// ========== CLICK RIPPLE ==========
-document.addEventListener('click', e => {
-  const ripple = document.createElement('div');
-  ripple.style.cssText = `
-    position: fixed;
-    left: ${e.clientX}px;
-    top: ${e.clientY}px;
-    width: 4px; height: 4px;
-    border: 1px solid rgba(0,200,180,0.6);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9997;
-    animation: rippleAnim 0.6s ease-out forwards;
-  `;
-  document.body.appendChild(ripple);
-  setTimeout(() => ripple.remove(), 600);
-});
+  /* ── Mobile hamburger menu ── */
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click',function(){
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
 
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes rippleAnim {
-    to { width: 60px; height: 60px; opacity: 0; }
-  }
-`;
-document.head.appendChild(style);
+  /* ── Smooth scroll for all anchor links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if(target){
+        e.preventDefault();
+        var offset = 80;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({top:top, behavior:'smooth'});
+      }
+    });
+  });
+
+  // Initial progress bar update
+  updateProgress();
+
+})();
+
+function closeMobile(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
 </script>
 </body>
 </html>
