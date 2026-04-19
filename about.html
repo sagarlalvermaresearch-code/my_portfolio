@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Sagar Lal Verma | Immunology Researcher</title>
+<meta name="description" content="About Sagar Lal Verma — Immunology researcher, PhD applicant (2026-2027), academic counselor, founder of SL Verma Research Hub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+
+:root {
+  --night:#030b07;--deep:#060f0e;--void:#091812;--surface:#0d1f16;--raised:#12291b;
+  --bio:#00e5a0;--bio2:#00c47a;--bio3:rgba(0,229,160,.07);--bio-glow:rgba(0,229,160,.22);
+  --gold:#c9a23a;--gold2:#e8b84e;--gold-dim:rgba(201,162,58,.14);--amber:#f0c96a;
+  --cream:#ede8dd;--muted:rgba(237,232,221,.52);--dim:rgba(237,232,221,.28);--faint:rgba(237,232,221,.1);
+  --border:rgba(0,229,160,.09);--border2:rgba(237,232,221,.06);
+  --orcid:#a6ce39;--linkedin:#0077b5;
+  --r:.3s cubic-bezier(.4,0,.2,1);--r-slow:.65s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:var(--night);color:var(--cream);overflow-x:hidden;cursor:none}
+#cursor{position:fixed;width:7px;height:7px;background:var(--bio);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .12s,height .12s,background .2s;mix-blend-mode:screen}
+#cursor-ring{position:fixed;width:30px;height:30px;border:1px solid rgba(0,229,160,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.35;transition:width .22s,height .22s,opacity .22s}
+#cursor.hover{width:14px;height:14px;background:var(--gold)}
+#cursor-ring.hover{width:44px;height:44px;opacity:.18;border-color:var(--gold)}
+@media(pointer:coarse){body{cursor:auto}#cursor,#cursor-ring{display:none}}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--night)}::-webkit-scrollbar-thumb{background:var(--bio2);border-radius:2px}
+#progress{position:fixed;top:0;left:0;height:1px;background:linear-gradient(90deg,var(--bio),var(--gold));z-index:400;width:0;transition:width .06s linear}
+body::after{content:'';position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.016;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.8rem 5vw;display:flex;align-items:center;justify-content:space-between;transition:padding var(--r),background var(--r),border-color var(--r);border-bottom:1px solid transparent}
+nav.scrolled{padding:.9rem 5vw;background:rgba(3,11,7,.95);backdrop-filter:blur(28px) saturate(180%);border-color:var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:.05em;display:flex;align-items:center;gap:.5rem}
+.dot{width:5px;height:5px;background:var(--bio);border-radius:50%;display:inline-block;animation:pulse-dot 2.8s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 var(--bio-glow)}50%{box-shadow:0 0 0 7px transparent}}
+.nav-links{display:flex;gap:2.8rem;list-style:none}
+.nav-links a{font-size:.68rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color var(--r);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--bio);transition:width var(--r);box-shadow:0 0 5px var(--bio)}
+.nav-links a:hover,.nav-links a.active{color:var(--cream)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:.9rem}
+.nav-cta{padding:.45rem 1.4rem;border:1px solid rgba(0,229,160,.4);color:var(--bio);font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:all var(--r);position:relative;overflow:hidden}
+.nav-cta::before{content:'';position:absolute;inset:0;background:var(--bio);transform:translateX(-101%);transition:transform var(--r)}
+.nav-cta:hover{color:var(--night)}.nav-cta:hover::before{transform:translateX(0)}.nav-cta span{position:relative;z-index:1}
+.theme-btn,.menu-btn{width:36px;height:36px;border:1px solid var(--border2);background:transparent;color:var(--dim);border-radius:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--r);font-size:.8rem}
+.theme-btn:hover,.menu-btn:hover{border-color:var(--bio);color:var(--bio)}.menu-btn{display:none}
+.mob{display:none;position:fixed;inset:0;background:var(--night);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:2.8rem}
+.mob.open{display:flex}.mob a{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-style:italic;color:var(--cream);text-decoration:none;transition:color var(--r)}.mob a:hover{color:var(--bio)}
+.mob-cta{font-family:'DM Sans',sans-serif!important;font-style:normal!important;font-size:.76rem!important;letter-spacing:.14em;text-transform:uppercase;padding:.75rem 2.4rem;border:1px solid var(--bio);color:var(--bio)!important}
+.btn-primary{display:inline-flex;align-items:center;gap:.65rem;padding:.9rem 2.2rem;background:var(--bio);color:var(--night);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all var(--r);position:relative;overflow:hidden;font-family:'DM Sans',sans-serif}
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.14),transparent);opacity:0;transition:opacity var(--r)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 35px var(--bio-glow)}.btn-primary:hover::after{opacity:1}
+.btn-outline{display:inline-flex;align-items:center;gap:.65rem;padding:.9rem 2.2rem;border:1px solid var(--border2);color:var(--muted);font-size:.75rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all var(--r)}
+.btn-outline:hover{border-color:rgba(0,229,160,.35);color:var(--bio);box-shadow:inset 0 0 20px rgba(0,229,160,.04)}
+.btn-ghost-sm{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;color:var(--dim);text-decoration:none;letter-spacing:.09em;text-transform:uppercase;transition:color var(--r)}
+.btn-ghost-sm:hover{color:var(--gold)}
+.page-hero{padding:11rem 5vw 7rem;background:var(--night);position:relative;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;pointer-events:none}
+.page-hero-bg::before{content:'';position:absolute;top:-10%;right:-5%;width:700px;height:700px;background:radial-gradient(circle,rgba(0,229,160,.035) 0%,transparent 68%)}
+.page-hero-bg::after{content:'';position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,162,58,.03) 0%,transparent 65%)}
+.page-hero-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1}
+.page-label{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.22em;color:var(--bio);text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:.9rem}
+.page-label::before{content:'';width:18px;height:1px;background:var(--bio);box-shadow:0 0 5px var(--bio)}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6.5vw,6.5rem);font-weight:300;line-height:.94;letter-spacing:-.025em;margin-bottom:1.8rem}
+.page-title em{font-style:italic;color:var(--bio)}
+.page-subtitle{font-size:.97rem;color:var(--muted);line-height:1.8;max-width:540px;font-weight:300}
+.section{padding:8rem 5vw;position:relative}.section-inner{max-width:1300px;margin:0 auto}
+.s-label{display:flex;align-items:center;gap:1rem;margin-bottom:.9rem}
+.s-label-line{width:22px;height:1px;background:var(--bio);box-shadow:0 0 5px var(--bio)}
+.s-label-text{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--bio)}
+.s-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4.5vw,4.2rem);font-weight:300;line-height:1.04;margin-bottom:4.5rem;letter-spacing:-.015em}
+.s-title em{font-style:italic;color:var(--bio)}.s-title strong{font-weight:600}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.4,0,.2,1),transform .85s cubic-bezier(.4,0,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}.reveal-d5{transition-delay:.5s}
+footer{background:var(--deep);border-top:1px solid var(--border2);padding:3.2rem 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--cream);text-decoration:none;letter-spacing:.03em}
+.foot-logo span{color:var(--bio)}
+.foot-copy{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--dim)}
+.foot-links{display:flex;gap:1.8rem}
+.foot-links a{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color var(--r)}.foot-links a:hover{color:var(--bio)}
+#btt{position:fixed;bottom:2rem;right:2rem;width:40px;height:40px;background:var(--surface);border:1px solid var(--border);color:var(--bio);font-size:.75rem;display:flex;align-items:center;justify-content:center;z-index:500;opacity:0;transform:translateY(8px);transition:all var(--r);cursor:pointer}
+#btt.show{opacity:1;transform:translateY(0)}#btt:hover{background:var(--bio);color:var(--night)}
+body.light{--night:#f7f3ea;--deep:#ede7d4;--void:#e6dfc9;--surface:#ddd6be;--bio:#0a7050;--bio2:#096040;--bio-glow:rgba(10,112,80,.18);--gold:#8a6010;--cream:#16201a;--muted:rgba(22,32,26,.56);--dim:rgba(22,32,26,.32);--faint:rgba(22,32,26,.09);--border:rgba(10,112,80,.13);--border2:rgba(22,32,26,.07)}
+body.light nav.scrolled{background:rgba(247,243,234,.96)}
+
+.page-hero-about::after{content:'ABOUT';position:absolute;font-family:'Cormorant Garamond',serif;font-size:20vw;font-weight:700;color:rgba(0,229,160,.018);top:50%;right:-5%;transform:translateY(-50%);white-space:nowrap;pointer-events:none;line-height:1}
+.about-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:6rem;align-items:start}
+.about-quote-block{border-left:2px solid var(--bio);padding:1.4rem 0 1.4rem 2rem;margin-bottom:2.8rem;box-shadow:-10px 0 24px rgba(0,229,160,.05);position:relative}
+.about-quote-block::before{content:'“';font-family:'Cormorant Garamond',serif;font-size:4rem;line-height:0;color:var(--bio);opacity:.25;position:absolute;top:1.8rem;left:.5rem}
+.about-quote-block p{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-style:italic;font-weight:300;color:var(--cream);line-height:1.65}
+.about-body p{font-size:.93rem;color:var(--muted);line-height:2;margin-bottom:1.3rem}
+.about-body strong{color:var(--cream);font-weight:500}
+.tag-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.2rem}
+.tag{padding:.3rem 1rem;font-size:.68rem;font-weight:500;letter-spacing:.07em;border:1px solid;border-radius:2px;font-family:'DM Mono',monospace;transition:all var(--r)}
+.tag-bio{border-color:rgba(0,229,160,.28);color:var(--bio);background:rgba(0,229,160,.04)}.tag-bio:hover{background:rgba(0,229,160,.09)}
+.tag-gold{border-color:rgba(201,162,58,.28);color:var(--gold);background:rgba(201,162,58,.04)}.tag-gold:hover{background:rgba(201,162,58,.09)}
+.info-table{display:flex;flex-direction:column;background:var(--deep);border:1px solid var(--border2);overflow:hidden}
+.info-row{display:flex;flex-direction:column;gap:.22rem;padding:.9rem 1.4rem;border-bottom:1px solid var(--border2);transition:background var(--r)}
+.info-row:last-child{border-bottom:none}
+.info-row:hover{background:var(--surface)}
+.info-key{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bio);opacity:.65}
+.info-val{font-size:.86rem;color:var(--cream)}
+.info-val a{color:var(--cream);text-decoration:none;transition:color var(--r)}.info-val a:hover{color:var(--bio)}
+.orcid-link{color:var(--orcid)!important;display:inline-flex;align-items:center;gap:.4rem}
+.li-link{display:inline-flex;align-items:center;gap:.4rem}
+.edu-bg{background:var(--deep)}
+.timeline{display:flex;flex-direction:column}
+.tl-item{display:grid;grid-template-columns:210px 1fr;position:relative;padding:4rem 0;border-bottom:1px solid var(--border2)}
+.tl-item:last-child{border-bottom:none;padding-bottom:0}
+.tl-left{padding-right:2rem}
+.tl-year{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--bio)}
+.tl-inst{font-size:.72rem;color:var(--dim);margin-top:.4rem;line-height:1.6;font-family:'DM Mono',monospace}
+.tl-dot{position:absolute;left:210px;top:4rem;width:9px;height:9px;background:var(--bio);border-radius:50%;transform:translateX(-4.5px);box-shadow:0 0 14px var(--bio-glow);z-index:1}
+.tl-line{position:absolute;left:210px;top:4rem;bottom:0;width:1px;background:var(--border2)}
+.tl-item:last-child .tl-line{display:none}
+.tl-body{padding-left:2.8rem}
+.tl-degree{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--cream);margin-bottom:.4rem;line-height:1.2}
+.tl-spec{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:var(--bio);margin-bottom:1.4rem;opacity:.75}
+.tl-body p{font-size:.87rem;color:var(--muted);line-height:1.9;margin-bottom:1rem}
+.pill{display:inline-flex;padding:.28rem .9rem;font-size:.68rem;font-weight:600;letter-spacing:.06em;font-family:'DM Mono',monospace;margin-right:.5rem;margin-top:.3rem;border-radius:2px}
+.pill-bio{background:rgba(0,229,160,.09);color:var(--bio);border:1px solid rgba(0,229,160,.2)}
+.pill-dim{background:rgba(237,232,221,.03);color:var(--muted);border:1px solid var(--border2)}
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border2)}
+.exp-card{background:var(--night);padding:3rem;position:relative;overflow:hidden;transition:background var(--r)}
+.exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--bio),var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform var(--r-slow)}
+.exp-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 0% 0%,rgba(0,229,160,.04),transparent 55%);opacity:0;transition:opacity var(--r)}
+.exp-card:hover{background:var(--void)}.exp-card:hover::before{transform:scaleX(1)}.exp-card:hover::after{opacity:1}
+.exp-num{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:700;color:var(--border2);line-height:1;margin-bottom:1.5rem;transition:color var(--r)}
+.exp-card:hover .exp-num{color:rgba(0,229,160,.1)}
+.exp-role{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--cream);margin-bottom:.3rem}
+.exp-org{font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;color:var(--bio);opacity:.65;margin-bottom:.3rem}
+.exp-period{font-family:'DM Mono',monospace;font-size:.66rem;color:var(--gold);margin-bottom:1.5rem}
+.exp-card ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.exp-card li{font-size:.84rem;color:var(--muted);line-height:1.75;padding-left:1.2rem;position:relative}
+.exp-card li::before{content:'';position:absolute;left:0;top:.68em;width:4px;height:1px;background:var(--bio);box-shadow:0 0 4px var(--bio)}
+@media(max-width:1000px){.about-grid{grid-template-columns:1fr}.tl-item{grid-template-columns:1fr}.tl-dot,.tl-line{display:none}.tl-body{padding-left:0;padding-top:.8rem}.exp-grid{grid-template-columns:1fr}.nav-links,.nav-cta{display:none}.menu-btn{display:flex}.section{padding:5rem 5vw}}
+@media(max-width:640px){.exp-card{padding:2rem}}
+</style></head><body>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="progress"></div>
+<button id="btt" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<div class="mob" id="mob">
+  <a href="index.html" onclick="closeMob()">Home</a><a href="about.html" onclick="closeMob()">About</a>
+  <a href="research.html" onclick="closeMob()">Research</a><a href="skills.html" onclick="closeMob()">Skills</a>
+  <a href="contact.html" onclick="closeMob()">Contact</a>
+  <a href="contact.html" class="mob-cta" onclick="closeMob()">Get in Touch</a>
+</div>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">SL<span class="dot"></span>Verma</a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html" class="active">About</a></li><li><a href="research.html">Research</a></li><li><a href="skills.html">Skills</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav-right">
+    <a href="contact.html" class="nav-cta"><span>Get in Touch</span></a>
+    <button class="theme-btn" id="themeBtn" title="Toggle theme"><i class="fas fa-moon"></i></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="page-hero page-hero-about">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="page-label reveal">01 &mdash; About</div>
+    <h1 class="page-title reveal reveal-d1">A scientist pursuing<br><em>discovery,</em><br>a mentor shaping futures</h1>
+    <p class="page-subtitle reveal reveal-d2">Independent researcher in Immunology &amp; Viral Pathology &mdash; bridging rigorous science with meaningful academic mentorship.</p>
+  </div>
+</div>
+<section class="section" id="about" style="background:var(--void)">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <div class="about-quote-block"><p>I am actively seeking fully funded PhD opportunities to transition into experimental immunology.</p></div>
+        <p>Independent researcher and founder of <strong>SL Verma Research Hub</strong>, specializing in Immunology and Viral Pathology. Currently focused on a systematic review of immune dysregulation in Long COVID using PRISMA methodology. With a <strong>Master's in Zoology (Immunology, First Division 73.1%)</strong> from Kumaun University, I bring a strong background in host&ndash;pathogen interactions and viral immunopathology.</p>
+        <p>I integrate AI-assisted tools like <strong>Elicit and Rayyan</strong> into my research workflow and am currently expanding my skills in R programming and biostatistics. My M.Sc. dissertation &mdash; a PRISMA-based systematic review of COVID-19 immunopathology &mdash; was supervised by <strong>Dr. Shankar Mondal, PhD (AIIMS, New Delhi)</strong>, who rated me in the top 5% of students.</p>
+        <p>Alongside research, I serve as a <strong>Certified USA Counselor at UCAN</strong>, having guided 100+ students through US graduate applications, SOP development, and scholarship research.</p>
+        <div class="tag-row">
+          <span class="tag tag-bio">PhD Applicant</span>
+          <span class="tag tag-bio">Viral Immunopathology</span>
+          <span class="tag tag-gold">Long COVID</span>
+          <span class="tag tag-gold">Systematic Review</span>
+          <span class="tag tag-bio">PRISMA 2020</span>
+          <span class="tag tag-bio">AI-Assisted Research</span>
+        </div>
+      </div>
+      <div class="info-table reveal reveal-d2">
+        <div class="info-row"><span class="info-key">Full Name</span><span class="info-val">Sagar Lal Verma</span></div>
+        <div class="info-row"><span class="info-key">Location</span><span class="info-val">Kathmandu, Nepal</span></div>
+        <div class="info-row"><span class="info-key">Specialization</span><span class="info-val">Immunology &amp; Viral Pathology</span></div>
+        <div class="info-row"><span class="info-key">Current Research</span><span class="info-val">Long COVID &amp; Immune Dysregulation</span></div>
+        <div class="info-row"><span class="info-key">Current Role</span><span class="info-val">Certified USA Counselor &mdash; UCAN</span></div>
+        <div class="info-row"><span class="info-key">Languages</span><span class="info-val">Nepali &middot; Hindi &middot; English (Fluent)</span></div>
+        <div class="info-row"><span class="info-key">Email</span><span class="info-val"><a href="mailto:research@sagarlalverma.com.np">research@sagarlalverma.com.np</a></span></div>
+        <div class="info-row"><span class="info-key">Website</span><span class="info-val"><a href="https://www.sagarlalverma.com.np/" target="_blank">sagarlalverma.com.np</a></span></div>
+        <div class="info-row"><span class="info-key">Phone</span><span class="info-val"><a href="tel:+9779705518670">+977 970 551 8670</a></span></div>
+        <div class="info-row"><span class="info-key">LinkedIn</span><span class="info-val"><a href="https://www.linkedin.com/in/sagar-verma-86a738296/" target="_blank" class="li-link"><i class="fab fa-linkedin" style="color:var(--linkedin)"></i> sagar-verma-86a738296</a></span></div>
+        <div class="info-row"><span class="info-key">ORCID</span><span class="info-val"><a href="https://orcid.org/0009-0003-8773-0160" target="_blank" class="orcid-link"><i class="fab fa-orcid"></i> 0009-0003-8773-0160</a></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section edu-bg" id="education">
+  <div class="section-inner">
+    <div class="s-label reveal"><div class="s-label-line"></div><span class="s-label-text">02 &mdash; Education</span></div>
+    <h2 class="s-title reveal reveal-d1">Academic <em>foundation</em><br>in life sciences</h2>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-left"><div class="tl-year">2019&ndash;2021</div><div class="tl-inst">Kumaun University<br>Nainital, Uttarakhand<br>India</div></div>
+        <div class="tl-dot"></div><div class="tl-line"></div>
+        <div class="tl-body">
+          <div class="tl-degree">Master of Science &mdash; Zoology</div>
+          <div class="tl-spec">Specialization: Immunology (Fundamentals &amp; Applied)</div>
+          <p>Intensive two-year program covering Immunology, Molecular Biology, Cytogenetics, Mammalian Endocrinology, Biochemistry, Animal Physiology, Biotechnology, Bioinstrumentation &amp; Biostatistics. Culminated in a PRISMA-based systematic review of COVID-19 immunopathology supervised by Dr. Shankar Mondal, PhD (AIIMS, New Delhi).</p>
+          <span class="pill pill-bio">First Division &middot; 73.1%</span>
+          <span class="pill pill-dim">Supervisor: Dr. Shankar Mondal, PhD</span>
+          <span class="pill pill-dim">Top 5% of Cohort</span>
+        </div>
+      </div>
+      <div class="tl-item reveal reveal-d2">
+        <div class="tl-left"><div class="tl-year">2016&ndash;2019</div><div class="tl-inst">Kumaun University<br>Nainital, Uttarakhand<br>India</div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-degree">Bachelor of Science &mdash; Biological Sciences</div>
+          <div class="tl-spec">Major: Botany &middot; Chemistry &middot; Zoology</div>
+          <p>Comprehensive undergraduate program building a strong foundation across Botany, Chemistry, and Zoology. Developed hands-on laboratory and field research skills through ecological study programs and excursions. All instruction in English medium.</p>
+          <span class="pill pill-bio">First Division &middot; 62.0%</span>
+          <span class="pill pill-dim">Medium of Instruction: English</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="experience" style="background:var(--night)">
+  <div class="section-inner">
+    <div class="s-label reveal"><div class="s-label-line"></div><span class="s-label-text">03 &mdash; Experience</span></div>
+    <h2 class="s-title reveal reveal-d1">Research, counseling &amp; <em>academic</em> journey</h2>
+    <div class="exp-grid">
+      <div class="exp-card reveal" data-hover>
+        <div class="exp-num">01</div>
+        <div class="exp-role">Certified USA Counselor</div>
+        <div class="exp-org">Ultimate Consultancy &amp; Advisory Network (UCAN) &middot; Kathmandu</div>
+        <div class="exp-period">Dec 2025 &mdash; Present</div>
+        <ul>
+          <li>Guide students through US university applications, SOP development, and documentation</li>
+          <li>Evaluate academic profiles; match students to graduate programs and funding opportunities</li>
+          <li>Conduct workshops on admissions strategies and research proposal writing</li>
+          <li>Assisted 100+ students in navigating international graduate education pathways</li>
+        </ul>
+      </div>
+      <div class="exp-card reveal reveal-d1" data-hover>
+        <div class="exp-num">02</div>
+        <div class="exp-role">Independent Researcher</div>
+        <div class="exp-org">SL Verma Research Hub &middot; Immunology &amp; Infectious Diseases &middot; Kathmandu</div>
+        <div class="exp-period">Jan 2022 &mdash; Present</div>
+        <ul>
+          <li>Conducting systematic review on immune dysregulation in Long COVID using PRISMA 2020</li>
+          <li>Analyze host&ndash;pathogen interactions and immune response mechanisms</li>
+          <li>Utilize AI-assisted tools (Elicit, Rayyan, ChatGPT) for literature screening and synthesis</li>
+          <li>Training in biostatistics and R programming for quantitative research</li>
+        </ul>
+      </div>
+      <div class="exp-card reveal reveal-d2" data-hover>
+        <div class="exp-num">03</div>
+        <div class="exp-role">Master's Dissertation Research</div>
+        <div class="exp-org">Kumaun University &middot; Dept. of Zoology &middot; Nainital, India</div>
+        <div class="exp-period">Oct 2020 &mdash; Oct 2021</div>
+        <ul>
+          <li>Systematic review of COVID-19 pathogenesis, immune responses, and therapeutics</li>
+          <li>Analyzed viral immunology mechanisms and host&ndash;pathogen interactions</li>
+          <li>Synthesized immunological, virological, and clinical literature on SARS-CoV-2</li>
+          <li>Developed strong scientific writing and critical appraisal skills</li>
+        </ul>
+      </div>
+      <div class="exp-card reveal reveal-d3" data-hover>
+        <div class="exp-num">04</div>
+        <div class="exp-role">Academic Achievements &amp; Outreach</div>
+        <div class="exp-org">Kumaun University &middot; ASPIRE Program &amp; Community Initiatives</div>
+        <div class="exp-period">2016 &mdash; 2021</div>
+        <ul>
+          <li>Rated top 5% of students by Dr. Shankar Mondal, PhD (AIIMS) for academic performance</li>
+          <li>Active participant in ASPIRE and community science awareness programs</li>
+          <li>Published handwritten wall magazines for science communication and outreach</li>
+          <li>All education conducted in English medium (5-year certificate available)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="foot-logo">Sagar Lal <span>Verma</span></a>
+  <span class="foot-copy">&copy; 2026 &middot; PhD Applicant &middot; Immunology &amp; Viral Pathology &middot; Kathmandu, Nepal</span>
+  <div class="foot-links">
+    <a href="about.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer><script>
+
+(function(){
+'use strict';
+var cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+if(cur&&window.matchMedia('(pointer:fine)').matches){
+  var mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+  (function raf(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(raf);})();
+  document.querySelectorAll('a,button,[data-hover]').forEach(function(el){
+    el.addEventListener('mouseenter',function(){cur.classList.add('hover');ring.classList.add('hover');});
+    el.addEventListener('mouseleave',function(){cur.classList.remove('hover');ring.classList.remove('hover');});
+  });
+}
+var prog=document.getElementById('progress');
+function updP(){var t=document.documentElement.scrollHeight-document.documentElement.clientHeight;if(prog)prog.style.width=(t?window.scrollY/t*100:0)+'%';}
+var nav=document.getElementById('nav'),btt=document.getElementById('btt');
+if(btt)btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+window.addEventListener('scroll',function(){updP();if(nav)nav.classList.toggle('scrolled',window.scrollY>60);if(btt)btt.classList.toggle('show',window.scrollY>400);},{passive:true});
+var themeBtn=document.getElementById('themeBtn');
+var isLight=localStorage.getItem('theme')==='light';
+function applyTheme(l){document.body.classList.toggle('light',l);if(themeBtn)themeBtn.innerHTML=l?'<i class="fas fa-moon"></i>':'<i class="fas fa-sun"></i>';localStorage.setItem('theme',l?'light':'dark');}
+applyTheme(isLight);
+if(themeBtn)themeBtn.addEventListener('click',function(){isLight=!isLight;applyTheme(isLight);});
+var mob=document.getElementById('mob'),menuBtn=document.getElementById('menuBtn');
+if(menuBtn)menuBtn.addEventListener('click',function(){mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':'';});
+if('IntersectionObserver' in window){
+  var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');obs.unobserve(en.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+updP();
+})();
+function closeMob(){var m=document.getElementById('mob');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+
+
+</script>
+</body>
+</html>
